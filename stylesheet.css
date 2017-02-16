@@ -3,7 +3,7 @@ body {
 }
 
 #mainArea {
-	height:80vh;
+	height:90vh;
 }
 
 .navLink {
@@ -19,4 +19,22 @@ body {
 #myName {
 	font-size: 1.5em;
 	padding: 40px 30px;
+}
+
+.imgContainer {
+	width:47%;
+	height: 300px;
+	overflow: hidden;
+	float: left;
+	
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+.topSpacer{
+	height: 50px;
+}
+
+iframe {
+	border: none;
 }
