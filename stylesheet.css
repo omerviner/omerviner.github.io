@@ -1,5 +1,6 @@
 :root {
   --mainColor: #20a58e;
+  --imageWidth: 45vw;
 }
 
 
@@ -61,13 +62,12 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .imgContainer {
-	width:47%;
-	height: 300px;
+	width: var(--imageWidth);
 	overflow: hidden;
 	float: left;
-	
 	margin-right: 15px;
 	margin-bottom: 15px;
+	background: var(--mainColor);
 }
 
 .topSpacer{
@@ -117,3 +117,10 @@ body::-webkit-scrollbar-thumb
 	background-color: var(--mainColor);
 	
 }
+
+img {
+	width: var(--imageWidth);
+}
+
+
+
