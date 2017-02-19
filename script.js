@@ -14,7 +14,7 @@ $(document).ready(function(){
 		}
     });
 	
-	$(".imgContainer").hover(function(){
-		alert("a");
-	});
+	
+        return false;
+    });
 });
