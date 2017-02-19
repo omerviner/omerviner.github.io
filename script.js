@@ -14,5 +14,7 @@ $(document).ready(function(){
 		}
     });
 	
-	
+	$(".imgContainer").click(function(){
+		alert("a");
+	}); 	
 });
