@@ -2,6 +2,7 @@
   --mainColor: #20a58e;
   --imageWidth: 45vw;
   --imageHeight: 22.5vw;
+  --black: #777;
 }
 
 
@@ -75,6 +76,11 @@ a:link, a:visited, a:hover, a:active {
 
 .topSpacer{
 	height: 50px;
+}
+
+.imageSpacer{
+	
+	height: 200px;
 }
 
 iframe {
@@ -158,4 +164,47 @@ body::-webkit-scrollbar-thumb
 
 .infoPage img {
 	width: 75%;
+	padding: 200px 0 0 0;
+}
+
+.youtubeContainer {
+	width: 200px;
+	
+	padding: 200px 0 0 0;
+	height: 200px;
+}
+
+.infoPage img:first-child {
+	width: 75%;
+	padding: 0;
+}
+
+.text {
+
+	margin:auto;
+	font-size: 1.2em;
+	color: var(--black);
+	padding: 200px 0 0 25%;
+}
+
+.imageDescription {
+	padding: 5px;;
+	margin:auto;
+	font-size: 1em;
+	color: var(--black);
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	width:75%;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
