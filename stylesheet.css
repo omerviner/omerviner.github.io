@@ -190,11 +190,11 @@ body::-webkit-scrollbar-thumb
 }
 
 .text {
-
-	margin:auto;
-	font-size: 1.2em;
-	color: var(--black);
-	padding: 200px 0 0 25%;
+    font-size: 1.2em;
+    color: var(--black);
+    padding: 200px 0 0 0;
+    text-align: center;
+    width: 75%;
 }
 
 .imageDescription {
@@ -217,4 +217,14 @@ body::-webkit-scrollbar-thumb
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.projectHeader {
+	font-size: 2em;
+    padding: 100px 0;
+    font-weight: bold;
+}
+
+.projectDesc, .projectTec {
+	padding-left: 10%;
 }
