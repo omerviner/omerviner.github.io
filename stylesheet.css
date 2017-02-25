@@ -227,4 +227,7 @@ body::-webkit-scrollbar-thumb
 
 .projectDesc, .projectTec {
 	padding-left: 10%;
+	padding-bottom: 20px;
+	font-size: 1.2em;
+	
 }
