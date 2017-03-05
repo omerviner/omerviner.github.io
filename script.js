@@ -22,8 +22,10 @@ $(document).ready(function(){
 	// Listen to message from child window
 	eventer(messageEvent,function(e) {
 		var idName = e.data;
-	  console.log('parent received message!:  ', idName);
-	  $(".projectLink").css("background-color", "black");
+	    console.log('parent received message!:  ', idName);
+	    $("#projectsLink").removeClass("chosen");
+		$("a").removeClass("chosen");
+		$("#" + idName).addClass("chosen");
 	},false);
 
 
