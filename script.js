@@ -23,7 +23,7 @@ $(document).ready(function(){
 	eventer(messageEvent,function(e) {
 		var idName = e.data;
 	  console.log('parent received message!:  ', idName);
-	  $("#" + idName).css("backgound-color", "black");
+	  $(".projectLink").css("backgound-color", "black");
 	},false);
 
 
