@@ -169,6 +169,7 @@ body::-webkit-scrollbar-thumb
 
 .smallPageImage {
 	width: 50% !important;
+	margin-left: 12.5% !important;
 }
 
 .smallImageFloat{
@@ -198,10 +199,14 @@ body::-webkit-scrollbar-thumb
 }
 
 .imageDescription {
-	padding: 5px;;
+	padding: 5px;
 	margin:auto;
 	font-size: 1em;
 	color: var(--black);
+}
+
+.smallImageDescription {
+	margin-left: 12.5%;
 }
 
 .videoWrapper {
@@ -226,8 +231,10 @@ body::-webkit-scrollbar-thumb
 }
 
 .projectDesc, .projectTec {
-	padding-left: 10%;
-	padding-bottom: 20px;
+	margin-bottom: 20px;
 	font-size: 1.2em;
+	width: 75%;
+	background: white;
+	padding: 60px;
 	
 }
