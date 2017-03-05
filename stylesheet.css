@@ -78,6 +78,10 @@ a:link, a:visited, a:hover, a:active {
 	height: 50px;
 }
 
+.smallSpacer{
+	height: 20px;
+}
+
 .imageSpacer{
 	
 	height: 200px;
@@ -230,11 +234,19 @@ body::-webkit-scrollbar-thumb
     font-weight: bold;
 }
 
-.projectDesc, .projectTec {
+.projectDesc, .projectTec, .imageDescWhite {
 	margin-bottom: 20px;
 	font-size: 1.2em;
 	width: 75%;
 	background: white;
 	padding: 60px;
 	
+}
+
+.imageDescWhite {
+	padding-top: 0;
+}
+
+.mailLink {
+	color: var(--mainColor) !important;
 }
