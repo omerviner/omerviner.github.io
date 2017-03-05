@@ -22,6 +22,7 @@ $(document).ready(function(){
 	// Listen to message from child window
 	eventer(messageEvent,function(e) {
 	  console.log('parent received message!:  ',e.data);
+	  $("#" + e.data).css("backgound-color", "black");
 	},false);
 
 

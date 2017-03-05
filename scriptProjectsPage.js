@@ -1,7 +1,8 @@
 $(document).ready(function(){
 	$(".imgContainer").hover(function(){
 		console.log("omer");
-		parent.postMessage("viner", "https://omerviner.github.io/portfolio/");
+		var name = $(this).attr("id");
+		parent.postMessage(name, "https://omerviner.github.io/portfolio/");
 		});
 
 });
