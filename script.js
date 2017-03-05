@@ -14,20 +14,16 @@ $(document).ready(function(){
 		}
     });
 	
-	window.addEventListener('message', function(event) { 
+	// Create IE + others compatible event handler
+	var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+	var eventer = window[eventMethod];
+	var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
 
-		// IMPORTANT: Check the origin of the data! 
-		if (~event.origin.indexOf('http://yoursite.com')) { 
-			// The data has been sent from your site 
+	// Listen to message from child window
+	eventer(messageEvent,function(e) {
+	  console.log('parent received message!:  ',e.data);
+	},false);
 
-			// The data sent with postMessage is stored in event.data 
-			console.log(event.data); 
-		} else { 
-			// The data hasn't been sent from your site! 
-			// Be careful! Do not use it. 
-			return; 
-		} 
-	}); 
 
 
 
