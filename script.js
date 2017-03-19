@@ -14,6 +14,8 @@ $(document).ready(function(){
 		}
     });
 	
+
+
 	// Create IE + others compatible event handler
 	var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
 	var eventer = window[eventMethod];
