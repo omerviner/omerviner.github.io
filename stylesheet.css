@@ -3,7 +3,8 @@
   --imageWidth: 45vw;
   --imageHeight: 22.5vw;
   --black: #777;
-  --lightGray: rgb(240,240,240);
+  --lightGray: rgb(255,255,255);
+  --pink: pink;
 }
 
 
@@ -249,7 +250,10 @@ body::-webkit-scrollbar-thumb
 
 .secHeader {
 	color: var(--black);
-	
+}
+
+.pink {
+	color: var(--pink)!important;
 }
 
 .projectDesc, .projectTec, .imageDescWhite {
