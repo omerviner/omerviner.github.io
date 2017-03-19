@@ -3,6 +3,7 @@
   --imageWidth: 45vw;
   --imageHeight: 22.5vw;
   --black: #777;
+  --lightGray: rgb(240,240,240);
 }
 
 
@@ -18,7 +19,7 @@
 }
 
 body {
-	background: rgb(250,250,250);
+	background: var(--lightGray);
 	font-family: Raleway;
 }
 
@@ -219,6 +220,11 @@ body::-webkit-scrollbar-thumb
 	margin-left: 12.5%;
 }
 
+.noPadding {
+	padding: 0!important;
+	
+}
+
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
@@ -238,6 +244,12 @@ body::-webkit-scrollbar-thumb
 	font-size: 3em;
     padding: 100px 0;
     font-weight: bold;
+	color: var(--mainColor);
+}
+
+.secHeader {
+	color: var(--black);
+	
 }
 
 .projectDesc, .projectTec, .imageDescWhite {
@@ -246,7 +258,11 @@ body::-webkit-scrollbar-thumb
 	width: 75%;
 	background: white;
 	padding: 60px;
-	
+}
+
+.projectDesc {
+	background: var(--mainColor);
+	color: white;
 }
 
 .imageDescWhite {
