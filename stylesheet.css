@@ -19,6 +19,18 @@
 	font-weight: bold;
 }
 
+@font-face {
+    font-family: OpenSans;
+    src: url(opensans/OpenSans-Regular.ttf);
+	font-weight: regular;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(opensans/OpenSans-Light.ttf);
+	font-weight: light;
+}
+
 body {
 	background: var(--lightGray);
 	font-family: Raleway;
@@ -262,6 +274,7 @@ body::-webkit-scrollbar-thumb
 	width: 75%;
 	background: white;
 	padding: 60px;
+	font-family: OpenSans;
 }
 
 .projectDesc {
