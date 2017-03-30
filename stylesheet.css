@@ -7,7 +7,6 @@
   --pink: pink;
 }
 
-
 @font-face {
     font-family: Raleway;
     src: url(raleway/Raleway-Regular.ttf);
@@ -22,12 +21,14 @@
 @font-face {
     font-family: OpenSans;
     src: url(opensans/OpenSans-Regular.ttf);
+	src: url(opensans/OpenSans-Regular.eot);
 	font-weight: regular;
 }
 
 @font-face {
     font-family: OpenSans;
     src: url(opensans/OpenSans-Light.ttf);
+	src: url(opensans/OpenSans-Light.eot);
 	font-weight: light;
 }
 
@@ -62,10 +63,12 @@ a:link, a:visited, a:hover, a:active {
 .chosen {
 	font-weight: bold;
 	color: var(--mainColor) !important;
+	color: #20a58e !important;
 }
 
 #ov {
 	color: var(--mainColor) !important;
+	color: #20a58e !important;
 }
 
 #bar {
@@ -80,11 +83,13 @@ a:link, a:visited, a:hover, a:active {
 
 .imgContainer {
 	width: var(--imageWidth);
+	width: 45vw;
 	overflow: hidden;
 	float: left;
 	margin-right: 15px;
 	margin-bottom: 15px;
 	background: var(--mainColor);
+	background: #20a58e;
 	position: relative;
 }
 
@@ -142,11 +147,13 @@ body::-webkit-scrollbar
 body::-webkit-scrollbar-thumb
 {
 	background-color: var(--mainColor);
+	background-color: #20a58e;
 	
 }
 
 .imgContainer img {
 	width: var(--imageWidth);
+	width:45vw;
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
     -moz-transition: opacity 0.2s ease-in-out;
@@ -158,11 +165,13 @@ body::-webkit-scrollbar-thumb
 .nameHover {
 	position: absolute;
 	width: var(--imageWidth);
+	width: 45vw;
 	color: white;
 	font-size: 2em;
 	opacity: 0;
 	font-weight: bold;
 	background: var(--mainColor);
+	background: #20a58e;
 	transition: opacity 0.2s ease-in-out;
     -moz-transition: opacity 0.2s ease-in-out;
     -webkit-transition: opacity 0.2s ease-in-out;
@@ -259,6 +268,7 @@ body::-webkit-scrollbar-thumb
     padding: 100px 0;
     font-weight: bold;
 	color: var(--mainColor);
+	color: #20a58e;
 }
 
 .secHeader {
@@ -280,6 +290,7 @@ body::-webkit-scrollbar-thumb
 
 .projectDesc {
 	background: var(--mainColor);
+	background: #20a58e;
 	color: white;
 }
 
@@ -289,4 +300,5 @@ body::-webkit-scrollbar-thumb
 
 .mailLink {
 	color: var(--mainColor) !important;
+	color: #20a58e !important;
 }
