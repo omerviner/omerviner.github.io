@@ -20,8 +20,8 @@
 
 @font-face {
     font-family: OpenSans;
-	src: url(opensans/OpenSans-Regular.ttf),
-		 url(opensans/OpenSans-Regular.eot);
+	src: url(opensans/OpenSans-Regular.ttf) format('truetype'),
+		 url(opensans/OpenSans-Regular.eot) format('embedded-opentype');
 		 
 	
 	font-weight: regular;
@@ -29,8 +29,8 @@
 
 @font-face {
     font-family: OpenSans;
-	src: url(opensans/OpenSans-Light.ttf),
-		 url(opensans/OpenSans-Light.eot);
+	src: url(opensans/OpenSans-Light.ttf) format('truetype'),
+		 url(opensans/OpenSans-Light.eot) format('embedded-opentype');
 	
 	font-weight: light;
 }
