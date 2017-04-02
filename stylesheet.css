@@ -20,15 +20,17 @@
 
 @font-face {
     font-family: OpenSans;
-    src: url(opensans/OpenSans-Regular.ttf);
 	src: url(opensans/OpenSans-Regular.eot);
+    src: url(opensans/OpenSans-Regular.ttf);
+	
 	font-weight: regular;
 }
 
 @font-face {
     font-family: OpenSans;
-    src: url(opensans/OpenSans-Light.ttf);
 	src: url(opensans/OpenSans-Light.eot);
+    src: url(opensans/OpenSans-Light.ttf);
+	
 	font-weight: light;
 }
 
