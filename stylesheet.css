@@ -45,7 +45,7 @@ body {
 	height:90vh;
 }
 
-.navLink, .projectLink {
+.navLink, .projectLink, .projectCategory {
 	padding: 0 5px 10px 40px;
 	font-family: Raleway;
 }
@@ -55,7 +55,12 @@ body {
 }
 
 .projectLink {
-	font-size: 1em;
+	font-size: 0.9em;
+}
+
+.projectCategory {
+	font-size: 1.3em;
+	color: var(--mainColor);
 }
 
 
