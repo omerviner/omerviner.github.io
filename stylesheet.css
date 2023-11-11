@@ -51,7 +51,7 @@ body {
 }
 
 .navLink {
-	font-size: 1.1em;
+	font-size: 1.3em;
 }
 
 .projectLink {
@@ -61,6 +61,15 @@ body {
 .projectCategory {
 	font-size: 1.3em;
 	color: var(--mainColor);
+	font-weight: 700;
+}
+
+.projectCategoryMainArea {
+	font-family: Raleway;
+	font-size: 2em;
+	color: var(--mainColor);
+	font-weight: 700;
+	padding: 2em 0 1em 0;
 }
 
 
