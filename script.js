@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$("#projectsLink").addClass("chosen");
 
-	$('#bottomText').prepend("© " + (new Date).getFullYear());
+	$('#bottomText span').prepend("© " + (new Date).getFullYear());
 	
     $("a").click(function(){
 		$("#projectsLink").removeClass("chosen");
