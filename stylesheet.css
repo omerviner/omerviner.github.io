@@ -43,6 +43,11 @@ body {
 
 #mainArea {
 	height:90vh;
+	padding-right: 0;
+}
+
+.col-sm-9 {
+	padding-right: 0;
 }
 
 .navLink, .projectLink, .projectCategory {
@@ -101,6 +106,7 @@ a:link, a:visited, a:hover, a:active {
 
 .imgContainer {
 	width: var(--imageWidth);
+	max-width: 48%;
 	width: 45vw;
 	overflow: hidden;
 	float: left;
@@ -319,4 +325,349 @@ body::-webkit-scrollbar-thumb
 .mailLink {
 	color: var(--mainColor) !important;
 	color: #20a58e !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ============================================ */
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+	display: none;
+	position: fixed;
+	top: 17px;
+	left: 27px;
+	z-index: 1000;
+	background: transparent;
+	border: none;
+	padding: 0;
+	width: auto;
+	height: auto;
+	flex-direction: column;
+	justify-content: space-around;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-family: Raleway;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #555;
+}
+
+.mobile-menu-toggle span {
+	display: none;
+}
+
+.mobile-menu-toggle::before {
+	content: '☰ ';
+}
+
+.mobile-menu-toggle:hover {
+	color: var(--mainColor);
+}
+
+/* Mobile Only Message */
+.mobile-only-message {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: white;
+	z-index: 10000;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+}
+
+.mobile-message-content {
+	text-align: center;
+	font-family: Raleway;
+	max-width: 500px;
+}
+
+.mobile-message-content h1 {
+	font-size: 4em;
+	margin-bottom: 20px;
+}
+
+.mobile-message-content h2 {
+	font-size: 2em;
+	font-weight: bold;
+	color: var(--mainColor);
+	margin-bottom: 20px;
+}
+
+.mobile-message-content p {
+	font-size: 1.2em;
+	color: #555;
+	line-height: 1.6;
+	margin-bottom: 10px;
+}
+
+/* Tablet and below (< 992px) */
+@media screen and (max-width: 991px) {
+	#bar {
+		height: auto;
+		min-height: 100vh;
+		position: relative;
+	}
+	
+	#mainArea {
+		height: auto;
+		min-height: 100vh;
+	}
+	
+	.imgContainer {
+		width: 100%;
+		margin-right: 0;
+	}
+	
+	.imgContainer img {
+		width: 100%;
+		display: block;
+	}
+	
+	.nameHover {
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+	}
+	
+	.infoPage img {
+		width: 90%;
+		padding: 100px 0 0 0;
+	}
+	
+	.infoPage img:first-child {
+		width: 90%;
+	}
+	
+	.smallPageImage, .smallPageImageNoPadding {
+		width: 80% !important;
+		margin-left: 5% !important;
+	}
+	
+	.text {
+		width: 90%;
+		padding: 100px 0 0 0;
+	}
+	
+	.videoWrapper {
+		width: 90%;
+	}
+	
+	.projectDesc, .projectTec, .imageDescWhite {
+		width: 90%;
+		padding: 40px;
+	}
+	
+	.projectHeader {
+		padding: 50px 0;
+		font-size: 2.5em;
+	}
+}
+
+/* Mobile devices (< 768px) */
+@media screen and (max-width: 767px) {
+	body {
+		font-size: 14px;
+	}
+	
+	.mobile-only-message {
+		display: flex;
+	}
+	
+	.mobile-menu-toggle {
+		display: flex;
+	}
+	
+	#bar {
+		position: fixed;
+		left: -100%;
+		top: 0;
+		height: 100vh;
+		width: 80%;
+		max-width: 300px;
+		background: white;
+		z-index: 999;
+		overflow-y: auto;
+		transition: left 0.3s ease;
+		box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+		padding-bottom: 20px;
+	}
+	
+	#bar.mobile-nav-open {
+		left: 0;
+	}
+	
+	#mainArea {
+		width: 100%;
+		height: auto;
+		/* min-height: 60vh; */
+		margin-top: 60px;
+	}
+	
+	.navLink, .projectLink, .projectCategory {
+		padding: 8px 5px 8px 20px;
+	}
+	
+	.navLink {
+		font-size: 1.1em;
+	}
+	
+	.projectLink {
+		font-size: 0.85em;
+	}
+	
+	.projectCategory {
+		font-size: 1.1em;
+		margin-top: 15px;
+	}
+	
+	.projectCategoryMainArea {
+		font-size: 1.5em;
+		padding: 1em 0 0.5em 0;
+	}
+	
+	#myName {
+		font-size: 1.3em;
+		padding: 21px 0 20px 45px;
+	}
+	
+	hr {
+		margin-left: 15px;
+		width: 6em;
+	}
+	
+	#bottomText {
+		position: absolute;
+		bottom: 0;
+		padding: 20px 15px;
+		text-align: left;
+	}
+	
+	.imgContainer {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	
+	.imgContainer img {
+		width: 100%;
+		display: block;
+	}
+	
+	.nameHover {
+		width: 100%;
+		font-size: 1.5em;
+		height: 100%;
+		padding: 15px;
+	}
+	
+	.infoPage img {
+		width: 95%;
+		padding: 50px 0 0 0;
+	}
+	
+	.infoPage img:first-child {
+		width: 95%;
+	}
+	
+	.smallPageImage, .smallPageImageNoPadding {
+		width: 90% !important;
+		margin-left: 2.5% !important;
+	}
+	
+	.smallImageFloat {
+		width: 100% !important;
+		float: none;
+		padding-right: 0 !important;
+		margin-bottom: 10px;
+	}
+	
+	.text {
+		width: 95%;
+		padding: 50px 0 0 0;
+		font-size: 1em;
+	}
+	
+	.imageDescription {
+		font-size: 1em;
+		padding: 10px 5px;
+	}
+	
+	.smallImageDescription {
+		margin-left: 2.5%;
+	}
+	
+	.videoWrapper {
+		width: 95%;
+		padding-bottom: 53.43%; /* 16:9 adjusted */
+	}
+	
+	.projectHeader {
+		font-size: 2em;
+		padding: 30px 0;
+	}
+	
+	.projectDesc, .projectTec, .imageDescWhite {
+		width: 95%;
+		padding: 25px;
+		font-size: 1em;
+	}
+	
+	.topSpacer {
+		height: 20px;
+	}
+	
+	.imageSpacer {
+		height: 100px;
+	}
+}
+
+/* Small mobile devices (< 480px) */
+@media screen and (max-width: 479px) {
+	.navLink {
+		font-size: 1em;
+	}
+	
+	.projectCategory {
+		font-size: 1em;
+	}
+	
+	.projectCategoryMainArea {
+		font-size: 1.3em;
+	}
+	
+	#myName {
+		font-size: 1.2em;
+	}
+	
+	.nameHover {
+		font-size: 1.2em;
+		padding: 10px;
+	}
+	
+	.projectHeader {
+		font-size: 1.5em;
+		padding: 20px 0;
+	}
+	
+	.projectDesc, .projectTec, .imageDescWhite {
+		padding: 20px;
+		font-size: 0.95em;
+	}
+}
+
+/* Ensure the layout works with Bootstrap columns */
+@media screen and (max-width: 767px) {
+	.col-sm-3, .col-sm-9 {
+		width: 100% !important;
+		float: none !important;
+	}
+	
+	.no-float {
+		float: none !important;
+	}
 }

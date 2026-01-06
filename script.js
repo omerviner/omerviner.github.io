@@ -12,6 +12,11 @@ $(document).ready(function(){
 			$("#projectsLink").addClass("chosen");
 
 		}
+		
+		// Close mobile menu on link click (if on mobile)
+		if (window.innerWidth < 768) {
+			$("#bar").removeClass("mobile-nav-open");
+		}
     });
 	
 
@@ -29,9 +34,18 @@ $(document).ready(function(){
 		$("#" + idName).addClass("chosen");
 	},false);
 
+	// Mobile menu toggle
+	$("#menuToggle").click(function(){
+		$("#bar").toggleClass("mobile-nav-open");
+	});
 
-
-
-
+	// Close menu when clicking outside on mobile
+	$(document).click(function(event) {
+		if (window.innerWidth < 768) {
+			if (!$(event.target).closest('#bar, #menuToggle').length) {
+				$("#bar").removeClass("mobile-nav-open");
+			}
+		}
+	});
 
 });
