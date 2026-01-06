@@ -35,6 +35,14 @@
 	font-weight: light;
 }
 
+@font-face {
+    font-family: OpenSans;
+	src: url(opensans/OpenSans-Bold.ttf) format('truetype'),
+		 url(opensans/OpenSans-Bold.eot) format('embedded-opentype');
+	
+	font-weight: bold;
+}
+
 
 body {
 	background: var(--lightGray);
@@ -316,6 +324,10 @@ body::-webkit-scrollbar-thumb
 	background: var(--mainColor);
 	background: #20a58e;
 	color: white;
+}
+
+.projectDesc b {
+	font-weight: bold;
 }
 
 .imageDescWhite {
