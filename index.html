@@ -16,17 +16,7 @@
 </script>
 <body>
 
-<div class="container-fluid">
-
-  <!-- Mobile Only Message -->
-  <div class="mobile-only-message">
-    <div class="mobile-message-content">
-      <h1>👋</h1>
-      <h2>Hi there!</h2>
-      <p>This portfolio is best experienced on a larger screen.</p>
-      <p>Please visit from a desktop or tablet for the full experience.</p>
-    </div>
-  </div>
+<div class="container-fluid layout-container">
 
   <!-- Mobile Menu Toggle -->
   <button id="menuToggle" class="mobile-menu-toggle">
@@ -35,59 +25,75 @@
     <span></span>
   </button>
 
-  <div class="row">
+  <!-- Mobile Overlay -->
+  <div id="mobileOverlay" class="mobile-overlay"></div>
+
+	<div class="row layout-row">
     <div class="col-sm-3 no-float" id="bar" >
-		<div class="navLink" id="myName"><a href="projects.html" target="mainArea" id="myNameLink">Omer Viner</a></div>
-		<div class="navLink"><a href="projects.html" target="mainArea" class="chosen" id="projectsLink">Work</a></div>
-		<div class="navLink"><a href="about.html" target="mainArea" >About</a></div>
+		<div class="navLink" id="myName"><a href="#projects" id="myNameLink">Omer Viner</a></div>
+		<div class="navLink"><a href="#projects" class="chosen" id="projectsLink">Work</a></div>
+		<div class="navLink"><a href="#about" >About</a></div>
 		<hr>
 		<div class="projectCategory">Interactive</div>
 		<div class="projectLink">
-				<a href="mycellsandi.html" id="mycellsandi" target="mainArea">My Cells and I</a>
+				<a href="#mycellsandi" id="mycellsandi">My Cells and I</a>
 			</div>
 		<div class="projectLink">
-			<a href="nonlinear.html" id="nonlinear" target="mainArea">Non-Linear Story</a>
+			<a href="#nonlinear" id="nonlinear">Non-Linear Story</a>
 		</div>
 		<div class="projectLink">
-			<a href="elal.html" id="elal" target="mainArea">El-Al Advertisement Concept</a>
+			<a href="#elal" id="elal">El-Al Advertisement Concept</a>
 		</div>
 		<div class="projectCategory">Design</div>
 		<div class="projectLink">
-			<a href="digital.html" id="digital" target="mainArea">Digital Postcards</a>
+			<a href="#digital" id="digital">Digital Postcards</a>
 		</div>
 		<div class="projectLink">
-			<a href="cloudi.html" id="cloudi" target="mainArea">Cloudi</a>
+			<a href="#cloudi" id="cloudi">Cloudi</a>
 		</div>
 		<div class="projectLink">
-			<a href="snowden.html" id="snowden" target="mainArea">Snowden</a>
+			<a href="#snowden" id="snowden">Snowden</a>
 		</div>
 		<div class="projectLink">
-			<a href="graphics.html" id="graphics" target="mainArea">Cultural Graphics</a>
+			<a href="#graphics" id="graphics">Cultural Graphics</a>
 		</div>
 		<div class="projectLink">
-			<a href="stain.html" id="stain" target="mainArea">Dreams Train</a>
+			<a href="#stain" id="stain">Dreams Train</a>
 		</div>
 		<div class="projectLink">
-			<a href="photos.html" id="photos" target="mainArea">Photography</a>
+			<a href="#photos" id="photos">Photography</a>
 		</div>
 		<div class="projectLink">
-			<a href="serie.html" id="serie" target="mainArea">Tiny Adventures</a>
+			<a href="#serie" id="serie">Tiny Adventures</a>
 		</div>
 		<div class="projectLink">
-			<a href="camera.html" id="camera" target="mainArea">Drawings</a>
+			<a href="#camera" id="camera">Drawings</a>
 		</div>
 		<div class="projectLink">
-			<a href="package.html" id="package" target="mainArea">Package Design</a>
+			<a href="#package" id="package">Package Design</a>
 		</div>
 		<div class="projectLink">
-			<a href="patterns.html" id="patterns" target="mainArea">Patterns</a>
+			<a href="#patterns" id="patterns">Patterns</a>
 		</div>
 
 		<div id="bottomText"><br/><span id="ov"> Omer Viner, All rights reserved</span></div>
 		
 	</div>
 
-    <iframe src="projects.html" class="col-sm-9 no-float" id="mainArea" name="mainArea">.col-sm-4</div>
+		<div class="col-sm-9 no-float" id="mainArea">
+			<div id="contentLoader" class="loading">
+				<div class="skeleton skeleton-title"></div>
+				<div class="skeleton-grid">
+					<div class="skeleton skeleton-card"></div>
+					<div class="skeleton skeleton-card"></div>
+					<div class="skeleton skeleton-card"></div>
+					<div class="skeleton skeleton-card"></div>
+				</div>
+				<div class="skeleton skeleton-text"></div>
+				<div class="skeleton skeleton-text short"></div>
+			</div>
+			<div id="contentContainer"></div>
+		</div>
     
   </div>
 </div>
