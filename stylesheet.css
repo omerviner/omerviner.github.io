@@ -24,7 +24,7 @@
 		 url(opensans/OpenSans-Regular.eot) format('embedded-opentype');
 		 
 	
-	font-weight: regular;
+	font-weight: 400;
 }
 
 @font-face {
@@ -32,7 +32,7 @@
 	src: url(opensans/OpenSans-Light.ttf) format('truetype'),
 		 url(opensans/OpenSans-Light.eot) format('embedded-opentype');
 	
-	font-weight: light;
+	font-weight: 300;
 }
 
 @font-face {
@@ -793,4 +793,77 @@ body::-webkit-scrollbar-thumb
 	.no-float {
 		float: none !important;
 	}
+}
+
+/* ============================================
+   Intro and text cards (Selected work)
+   ============================================ */
+
+.introBlock {
+	padding: 3em 0 0 0;
+	font-family: Raleway;
+}
+
+.introHeadline {
+	font-size: 2.2em;
+	font-weight: bold;
+	color: #333;
+	max-width: 22em;
+}
+
+.introText {
+	font-family: OpenSans;
+	font-size: 1.15em;
+	color: #555;
+	max-width: 40em;
+	padding-top: 0.8em;
+}
+
+/* A card with text instead of an image, same size as image cards */
+.textCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	aspect-ratio: 2 / 1;
+	padding: 24px 32px;
+	color: white !important;
+	text-align: left;
+	/* darker teal so white body text passes 4.5:1 contrast */
+	background: #167a69 !important;
+}
+
+.textCard:hover, .textCard:focus {
+	opacity: 0.9;
+}
+
+.textCardTitle {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: white;
+}
+
+.textCardLine {
+	font-family: OpenSans;
+	font-size: 1.05em;
+	color: white;
+	padding-top: 0.4em;
+}
+
+.caseHeader {
+	padding: 40px 0 30px 0;
+}
+
+/* Visible keyboard focus */
+a:focus-visible, button:focus-visible {
+	outline: 2px solid var(--mainColor);
+	outline-offset: 2px;
+}
+
+/* Let the sidebar scroll when the project list is taller than the screen */
+#bar {
+	overflow-y: auto;
+}
+
+#bottomText {
+	position: static;
 }

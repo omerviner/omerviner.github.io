@@ -10,7 +10,7 @@ $(document).ready(function(){
 		const contentContainer = $('#contentContainer');
 		
 		// Show loading state
-		loader.addClass('loading').text('Loading...');
+		loader.addClass('loading');
 		mainArea.addClass('loading-content');
 		
 		// Fetch and load the content
@@ -30,6 +30,9 @@ $(document).ready(function(){
 				// Hide loader and show content with fade effect
 				loader.removeClass('loading');
 				contentContainer.html(bodyHtml);
+
+				// Give each page its own title (from the page's <title>)
+				document.title = (doc.title && doc.title !== 'Omer Viner') ? doc.title : 'Omer Viner';
 				mainArea.removeClass('loading-content');
 
 				// Load page-specific scripts (if any)
@@ -46,8 +49,8 @@ $(document).ready(function(){
 			})
 			.catch(error => {
 				console.error('Error loading content:', error);
-				loader.removeClass('loading').html('<div class="error-message">Failed to load content</div>');
-				contentContainer.empty();
+				loader.removeClass('loading');
+				contentContainer.html('<div class="error-message">Failed to load content</div>');
 			});
 	}
 	
@@ -95,7 +98,7 @@ $(document).ready(function(){
 		if (window.innerWidth < 768) {
 			$("#bar").removeClass("mobile-nav-open");
 			$("#mobileOverlay").removeClass("active");
-			$("body").css("overflow", "");
+			$("body").css("overflow", ""); $("#menuToggle").attr("aria-expanded", "false");
 		}
     });
 
@@ -118,6 +121,7 @@ $(document).ready(function(){
 	$("#menuToggle").click(function(){
 		$("#bar").toggleClass("mobile-nav-open");
 		$("#mobileOverlay").toggleClass("active");
+		$(this).attr("aria-expanded", $("#bar").hasClass("mobile-nav-open"));
 		
 		// Prevent body scroll when menu is open
 		if ($("#bar").hasClass("mobile-nav-open")) {
@@ -131,7 +135,7 @@ $(document).ready(function(){
 	$("#mobileOverlay").click(function() {
 		$("#bar").removeClass("mobile-nav-open");
 		$("#mobileOverlay").removeClass("active");
-		$("body").css("overflow", "");
+		$("body").css("overflow", ""); $("#menuToggle").attr("aria-expanded", "false");
 	});
 
 	// Close menu when clicking outside on mobile
@@ -140,7 +144,7 @@ $(document).ready(function(){
 			if (!$(event.target).closest('#bar, #menuToggle').length) {
 				$("#bar").removeClass("mobile-nav-open");
 				$("#mobileOverlay").removeClass("active");
-				$("body").css("overflow", "");
+				$("body").css("overflow", ""); $("#menuToggle").attr("aria-expanded", "false");
 			}
 		}
 	});
