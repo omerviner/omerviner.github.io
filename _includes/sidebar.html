@@ -1,0 +1,21 @@
+{%- assign selected = site.projects | where: "group", "selected" | sort: "order" -%}
+<nav id="bar" class="sidebar" aria-label="Main">
+  <a class="sidebar-name" href="/">Omer Viner</a>
+  <ul class="nav-main">
+    <li><a href="/" {% if page.url == "/" or page.collection == "projects" %}class="chosen"{% endif %}>Work</a></li>
+    <li><a href="/about/" {% if page.url == "/about/" %}class="chosen"{% endif %}>About</a></li>
+    <li><a href="mailto:{{ site.email }}">Contact</a></li>
+  </ul>
+  <hr>
+  <div class="nav-category">Selected work</div>
+  <ul class="nav-projects">
+    {%- for p in selected %}
+    <li><a href="{{ p.url }}" {% if page.url == p.url %}class="chosen" aria-current="page"{% endif %}>{{ p.title }}</a></li>
+    {%- endfor %}
+  </ul>
+  <div class="nav-category"><a href="/#earlier">Earlier work</a></div>
+  <div class="sidebar-footer">
+    <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a><br>
+    © {{ site.time | date: "%Y" }} Omer Viner
+  </div>
+</nav>

@@ -1,0 +1,31 @@
+title: Omer Viner
+tagline: Software engineer, interactive & creative products
+description: >-
+  Omer Viner: senior software engineer and designer building interactive,
+  visual products. Bazaart, OrCam, and the award-winning interactive book
+  My Cells and I.
+url: "https://omerviner.github.io"
+baseurl: ""
+email: mr.omer.viner@gmail.com
+linkedin: https://www.linkedin.com/in/omer-viner-23038a95/
+og_image: /images/mycellsandi.jpg
+
+collections:
+  projects:
+    output: true
+    permalink: /work/:name/
+
+plugins:
+  - jekyll-redirect-from
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+defaults:
+  - scope:
+      type: projects
+    values:
+      layout: project
