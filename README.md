@@ -40,3 +40,13 @@ The OrCam Hear visuals come from the designers' case studies (used with permissi
 ```
 sh tools/fetch-orcam-images.sh
 ```
+
+## PopApp screenshots
+
+```
+npx -y playwright@1.48.2 install chromium   # once
+npx -y -p playwright@1.48.2 node tools/screenshot-popapp.mjs
+```
+
+Saves home (desktop and phone) and purchase screenshots of popappbooks.me into `images/popapp/`.
+For `images/popapp/design-system.png`, export the Design System artboard from the design canvas.
