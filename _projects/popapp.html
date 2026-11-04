@@ -17,22 +17,28 @@ redirect_from: ["/popapp.html"]
   <!-- TODO: one or two sentences on what wasn't working with the old site. -->
   <p>[What wasn't working with the old site, and what the new one had to do.]</p>
 
+  <h2>Design system</h2>
+  <p>The site is built from the book itself: its illustrations, the brush strokes from the crowdfunding campaign and the feel of printed paper. I turned that into a system that code can reuse.</p>
+  <ul>
+    <li><b>Color with rules.</b> Cream, deep green, magenta, wine red, yellow and mint, plus a list of text and background pairs that pass contrast. White on pink is allowed only at 19px bold and up.</li>
+    <li><b>Type.</b> Greta Text Pro HL for headlines and Heebo for body text. I tuned Heebo's weights and size (size-adjust 93.4%) so it matches the reference font's color and x-height.</li>
+    <li><b>Brush shapes as masks.</b> Labels, stickers, steps and photo frames are SVG masks traced from the campaign's brush strokes, with a shared watercolor texture on top. Any shape works in any color and stays sharp at any size.</li>
+    <li><b>Hand-drawn icons</b> that take their color from the text, and illustrated objects from the book (microscope, test tube, skeleton) with a planned place on the site for each.</li>
+    <li><b>One rule for section edges.</b> Wavy section edges use a 48px band with a 24px midline, and each section overlaps the one above, so transitions never leave gaps. Phone sizes scale it down to 32px.</li>
+    <li><b>Paper grain</b> over the whole page, so it feels like the printed book.</li>
+  </ul>
+
   <h2>Scope</h2>
   <ul>
-    <li>31 designed screens: home, purchase, app welcome (from the QR code in the book), thank-you, press and 404, each for desktop, tablet and mobile.</li>
-    <li>A small design system and UI component sheet, a layered hero scene, share image, sign-up confirmation email and cookie consent.</li>
-    <li>Print pieces from the same system: a postcard for the package, a two-page teachers' guide and a "questions kids ask" sheet.</li>
-    <li>A purchase flow with quantities and add-ons, and a separate quote path for kindergartens and schools.</li>
+    <li>31 designed screens: home, purchase, app welcome (from the QR code in the book), thank-you, press and 404, each at desktop (1440), tablet (834) and phone (390) sizes.</li>
+    <li>A UI component sheet, a layered hero scene, share image, sign-up confirmation email and cookie consent.</li>
+    <li>Print pieces from the same system: a postcard for the package, a two-page A4 teachers' guide and a "questions kids ask" sheet.</li>
   </ul>
 
-  <h2>What's live</h2>
-  <ul>
-    <li><b>Home:</b> a one-page story from the demo video and three spreads from the book, through the Davidson Institute endorsement, parents' and teachers' quotes, awards, press and an FAQ.</li>
-    <li><b>Purchase:</b> one or two books, an optional bookmark and sticker add-on, pickup-point or home delivery, and secure checkout. Schools and kindergartens get a quote form for 5+ books.</li>
-    <li><b>Press, app welcome page (from the QR code in the book), legal pages and an accessibility statement.</b></li>
-  </ul>
-
-  <h2>Build</h2>
-  <p>Astro on Cloudflare, Hebrew and right-to-left, responsive across phone, tablet and desktop. Forms with spam protection, a newsletter with double opt-in, cookie consent and ad measurement, a skip link and share previews on every page.</p>
-
-  <!-- TODO: export 4–6 screens from the design canvas (home desktop + mobile, purchase, design system) into images/popapp/ and add them here. -->
+  <!-- Screens: export from the design canvas (Share › Export) into images/popapp/ with these names, then remove this comment. -->
+  <div class="shots">
+    <figure><img src="/images/popapp/home-desktop.png" alt="Home page, desktop" loading="lazy"><figcaption>Home, desktop</figcaption></figure>
+    <figure><img src="/images/popapp/home-mobile.png" alt="Home page, phone" loading="lazy"><figcaption>Home, phone</figcaption></figure>
+    <figure><img src="/images/popapp/purchase.png" alt="Purchase page" loading="lazy"><figcaption>Purchase</figcaption></figure>
+    <figure><img src="/images/popapp/design-system.png" alt="Design system sheet: colors, type, brush shapes and icons" loading="lazy"><figcaption>Design system</figcaption></figure>
+  </div>
