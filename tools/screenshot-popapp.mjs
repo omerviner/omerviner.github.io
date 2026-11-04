@@ -1,6 +1,7 @@
 // Screenshots of popappbooks.me for the portfolio's PopApp page.
-// Run from the repo root:  npx -y -p playwright@1.48.2 node tools/screenshot-popapp.mjs
-// (First run: npx -y playwright@1.48.2 install chromium)
+// Run from the repo root:
+//   npm install --no-save playwright@1.48.2 && npx playwright install chromium   (once)
+//   node tools/screenshot-popapp.mjs
 import { chromium } from "playwright";
 import { mkdirSync } from "fs";
 

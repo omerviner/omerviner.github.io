@@ -24,6 +24,7 @@ exclude:
   - Gemfile.lock
   - vendor
   - tools
+  - node_modules
 
 defaults:
   - scope:
