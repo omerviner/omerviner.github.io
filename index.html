@@ -2,28 +2,21 @@
 layout: default
 ---
 {%- assign projects = site.projects | sort: "order" -%}
-<section class="intro">
-  <h1>Software engineer who builds interactive, visual products.</h1>
-  <p>B.Sc. Computer Science + B.Des. Visual Communication. Ten years of shipping AI design tools for the web,
-  real-time software for a wearable device, and award-winning interactive books.</p>
-</section>
+<p class="intro">Software engineer who builds interactive, visual products.</p>
 
-<section aria-labelledby="selected">
-  <h2 id="selected" class="section-title">Selected work</h2>
-  <div class="grid">
+<section aria-label="Selected work">
+  <div class="tiles">
     {%- for p in projects %}{% if p.group == "selected" %}{% include card.html p=p %}{% endif %}{% endfor %}
   </div>
 </section>
 
 <section aria-labelledby="earlier">
-  <h2 id="earlier" class="section-title">Earlier work</h2>
-  <p class="section-note">Student and personal projects, 2013 – 2018.</p>
-  <h3 class="section-subtitle">Interactive</h3>
-  <div class="grid grid-small">
-    {%- for p in projects %}{% if p.group == "interactive" %}{% include card.html p=p %}{% endif %}{% endfor %}
+  <div class="archive-head">
+    <h2 id="earlier">Earlier work</h2>
+    <span>Student and personal projects, 2013 – 2018</span>
   </div>
-  <h3 class="section-subtitle">Design and illustration</h3>
-  <div class="grid grid-small">
+  <div class="tiles tiles-small">
+    {%- for p in projects %}{% if p.group == "interactive" %}{% include card.html p=p %}{% endif %}{% endfor %}
     {%- for p in projects %}{% if p.group == "design" %}{% include card.html p=p %}{% endif %}{% endfor %}
   </div>
 </section>

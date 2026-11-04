@@ -6,13 +6,11 @@
     <li><a href="/about/" {% if page.url == "/about/" %}class="chosen"{% endif %}>About</a></li>
   </ul>
   <hr>
-  <div class="nav-category">Selected work</div>
   <ul class="nav-projects">
     {%- for p in selected %}
     <li><a href="{{ p.url }}" {% if page.url == p.url %}class="chosen" aria-current="page"{% endif %}>{{ p.title }}</a></li>
     {%- endfor %}
   </ul>
-  <div class="nav-category"><a href="/#earlier">Earlier work</a></div>
   <div class="sidebar-footer">
     <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a><br>
     © {{ site.time | date: "%Y" }} Omer Viner
