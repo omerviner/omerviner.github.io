@@ -49,4 +49,4 @@ node tools/screenshot-popapp.mjs
 ```
 
 Saves home (desktop and phone) and purchase screenshots of popappbooks.me into `images/popapp/`.
-For `images/popapp/design-system.png`, export the Design System artboard from the design canvas.
+The current images were rendered from the design canvas artboards. Run the script only to replace them with shots of the live site (it overwrites them).
