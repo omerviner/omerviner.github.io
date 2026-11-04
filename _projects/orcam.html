@@ -3,17 +3,45 @@ title: "OrCam Hear"
 group: selected
 order: 4
 year: "2020 – 2024"
-summary: "Real-time C++ and an iOS app for a wearable hearing device that uses AI and computer vision."
+summary: "AI earbuds that isolate one voice in a noisy room. I built the iOS app that controls them and the real-time software on the device."
 context: "Software Developer, OrCam"
-role: "Real-time audio-video components on the device; owned the iOS companion app UI"
-tools: "C++ (real-time, multi-threaded), Swift, Python, SQL, BigQuery"
+role: "iOS app UI from Figma to Swift: components, audio-driven animations, state and the data layer linked to the device. Real-time C++ on the device."
+tools: "Swift, C++ (real-time, multi-threaded), Python, SQL, BigQuery"
+outcome: "The app's room, balcony and favorites model shipped as designed, letting users move known voices in or out of the conversation without looking down. [TODO: add any number you can share: users, ratings, latency, crash-free rate.]"
+links:
+  - label: "UX case study by Rony Dagan"
+    url: "https://www.ronydagan.com/sec-hear"
+  - label: "UI case study by Sarai Beris"
+    url: "https://www.saraibdesign.com/orcam-hear-copy"
 redirect_from: ["/orcam.html"]
 ---
-  <h2>What I did</h2>
+  <h2>The product</h2>
+  <p>OrCam Hear is a pair of AI earbuds for people with mild hearing loss. It isolates the voices you choose and suppresses background noise in real time.
+  Users control it from an iPhone app in the middle of a conversation, often at a busy table. So the app has to work at a glance, and without making a show of managing a hearing problem.</p>
+
+  <!-- TODO: hero image or short screen recording of the app in use (ask the team which visuals you can show). -->
+
+  <h2>The design I built</h2>
+  <p>The UX lead, Rony Dagan, and the UI designer, Sarai Beris, designed the app around a spatial model.
+  The <b>room</b> holds the people you're listening to. The <b>balcony</b> holds people you've enrolled who are waiting. Strangers stay <b>outside</b>.
+  You pull people into the conversation or push them out with one quick move. My job was to turn that model into a smooth, reliable iOS app connected to the earbuds.</p>
+
+  <h2>What I did on the app</h2>
+  <ul>
+    <li><b>Figma to Swift.</b> Implemented the designs screen by screen and kept them pixel-accurate, working directly with the designers on motion and edge cases.</li>
+    <li><b>Component library in code.</b> Built every UI component in Swift, matching the designers' component library, so new screens were assembled from shared parts.</li>
+    <li><b>Audio-driven animation.</b> Animations react to live audio from the device, so users can see who is being heard and that the earbuds are working.</li>
+    <li><b>Smooth interaction.</b> Fast, predictable gestures for moving people between the room and the balcony, tuned for use while talking.</li>
+    <li><b>State and data.</b> Managed the app's state and linked the UI to the app's data layer, which connects to the embedded device, including enrolled voices, who is active and device status.</li>
+  </ul>
+
+  <h2>On the device</h2>
   <ul>
     <li>Developed real-time C++ software for the embedded device: multi-process, multi-threaded, under tight compute and power limits.</li>
     <li>Owned parts of the real-time audio-video flow: components that capture, process and deliver sound and image data.</li>
-    <li>Developed the iOS companion app in Swift and owned its UI, plus the layer linking device logic to the app.</li>
     <li>Integrated ML algorithms; built performance optimizations, usage analytics and internal tools.</li>
     <li>Coordinated development and testing with vision, DSP, algorithms, embedded, mobile and QA teams.</li>
   </ul>
+
+  <h2>Team</h2>
+  <p>Rony Dagan, UX lead · Sarai Beris, UX/UI design and component library · Dor Aaron, product manager · Omer Viner, iOS app and device software.</p>
