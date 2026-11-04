@@ -32,3 +32,11 @@ Front matter fields (all optional except `title`, `group`, `order`):
 | `redirect_from` | Old URLs that should land here |
 
 Below the front matter goes the page body: images, captions and videos in HTML.
+
+## OrCam images
+
+The OrCam Hear visuals come from the designers' case studies (used with permission). Download them once with:
+
+```
+sh tools/fetch-orcam-images.sh
+```

@@ -13,10 +13,12 @@
   --content-w: 960px;
 }
 
-@font-face { font-family: Raleway; src: url(/raleway/Raleway-Regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
-@font-face { font-family: Raleway; src: url(/raleway/Raleway-Bold.ttf) format("truetype"); font-weight: 700; font-display: swap; }
-@font-face { font-family: OpenSans; src: url(/opensans/OpenSans-Regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
-@font-face { font-family: OpenSans; src: url(/opensans/OpenSans-Bold.ttf) format("truetype"); font-weight: 700; font-display: swap; }
+
+/* "fallback": wait up to 100 ms for the font (instant when cached), so text doesn't flash between pages */
+@font-face { font-family: Raleway; src: url(/assets/fonts/raleway-400.woff2) format("woff2"); font-weight: 400; font-display: fallback; }
+@font-face { font-family: Raleway; src: url(/assets/fonts/raleway-700.woff2) format("woff2"); font-weight: 700; font-display: fallback; }
+@font-face { font-family: OpenSans; src: url(/assets/fonts/opensans-400.woff2) format("woff2"); font-weight: 400; font-display: fallback; }
+@font-face { font-family: OpenSans; src: url(/assets/fonts/opensans-700.woff2) format("woff2"); font-weight: 700; font-display: fallback; }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -239,3 +241,15 @@ img { max-width: 100%; height: auto; display: block; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+/* Smooth page-to-page navigation in browsers that support it (Chrome, Edge, Safari 18+) */
+@view-transition { navigation: auto; }
+.sidebar { view-transition-name: sidebar; }
+
+/* Image grid inside project pages, with credits */
+.project-body .shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 32px; }
+.project-body .shots img { margin-top: 0; }
+.project-body figure { margin: 56px 0 0; }
+.project-body .shots figure { margin: 0; }
+.project-body figure img { margin-top: 0; }
+.project-body figcaption { color: var(--muted); font-size: 0.9em; padding-top: 8px; }
+@media (max-width: 767px) { .project-body .shots { grid-template-columns: 1fr; } }

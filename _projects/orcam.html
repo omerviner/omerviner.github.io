@@ -13,18 +13,32 @@ links:
     url: "https://www.ronydagan.com/sec-hear"
   - label: "UI case study by Sarai Beris"
     url: "https://www.saraibdesign.com/orcam-hear-copy"
+hero: "/images/orcam/hero.avif"
+thumb: "/images/orcam/thumb.webp"
 redirect_from: ["/orcam.html"]
 ---
   <h2>The product</h2>
   <p>OrCam Hear is a pair of AI earbuds for people with mild hearing loss. It isolates the voices you choose and suppresses background noise in real time.
   Users control it from an iPhone app in the middle of a conversation, often at a busy table. So the app has to work at a glance, and without making a show of managing a hearing problem.</p>
 
-  <!-- TODO: hero image or short screen recording of the app in use (ask the team which visuals you can show). -->
 
   <h2>The design I built</h2>
   <p>The UX lead, Rony Dagan, and the UI designer, Sarai Beris, designed the app around a spatial model.
   The <b>room</b> holds the people you're listening to. The <b>balcony</b> holds people you've enrolled who are waiting. Strangers stay <b>outside</b>.
   You pull people into the conversation or push them out with one quick move. My job was to turn that model into a smooth, reliable iOS app connected to the earbuds.</p>
+
+  <figure>
+    <img src="/images/orcam/model.avif" alt="Diagram: the room holds active speakers, the balcony holds enrolled people, strangers stay outside" loading="lazy">
+    <figcaption>Room, balcony, outside. Diagram: Rony Dagan</figcaption>
+  </figure>
+
+  <div class="shots">
+    <figure><img src="/images/orcam/room.webp" alt="App screen: the room, with the people in the conversation" loading="lazy"><figcaption>The room, in use</figcaption></figure>
+    <figure><img src="/images/orcam/full-room.webp" alt="App screen: a full room with several speakers" loading="lazy"><figcaption>A full table</figcaption></figure>
+    <figure><img src="/images/orcam/enroll.webp" alt="App screen: enrolling a new voice" loading="lazy"><figcaption>Enrolling a voice at home</figcaption></figure>
+    <figure><img src="/images/orcam/contacts.webp" alt="App screen: list of enrolled people" loading="lazy"><figcaption>The list, one level down</figcaption></figure>
+  </div>
+  <p class="imageDescription">App screens as designed by Rony Dagan and Sarai Beris, built in Swift by me.</p>
 
   <h2>What I did on the app</h2>
   <ul>
@@ -34,6 +48,23 @@ redirect_from: ["/orcam.html"]
     <li><b>Smooth interaction.</b> Fast, predictable gestures for moving people between the room and the balcony, tuned for use while talking.</li>
     <li><b>State and data.</b> Managed the app's state and linked the UI to the app's data layer, which connects to the embedded device, including enrolled voices, who is active and device status.</li>
   </ul>
+
+  <figure>
+    <img src="/images/orcam/flow-1.png" alt="UI user flow, part 1" loading="lazy">
+  </figure>
+  <figure>
+    <img src="/images/orcam/flow-2.png" alt="UI user flow, part 2" loading="lazy">
+  </figure>
+  <figure>
+    <img src="/images/orcam/flow-3.png" alt="UI user flow, part 3" loading="lazy">
+    <figcaption>UI user flows. Design: Sarai Beris</figcaption>
+  </figure>
+
+  <div class="shots">
+    <figure><img src="/images/orcam/colors.webp" alt="Color palette of the OrCam Hear app" loading="lazy"><figcaption>Colors</figcaption></figure>
+    <figure><img src="/images/orcam/icons.png" alt="Icon set of the OrCam Hear app" loading="lazy"><figcaption>Icons</figcaption></figure>
+  </div>
+  <p class="imageDescription">The visual system I implemented as shared Swift components. Design: Sarai Beris</p>
 
   <h2>On the device</h2>
   <ul>
