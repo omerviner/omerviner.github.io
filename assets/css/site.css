@@ -363,3 +363,24 @@ img { max-width: 100%; height: auto; display: block; }
 .project-body .wide-figure.fit { text-align: center; }
 .project-body .wide-figure.fit img { width: auto; max-width: 100%; max-height: 85vh; display: inline-block; }
 .project-body .wide-figure.fit figcaption { text-align: left; }
+
+/* ---------- Batch Studio: big clips and tiles ---------- */
+.project-body .big { margin-top: 64px; }
+.project-body .big video {
+  display: block; width: 100%; height: auto; border-radius: 12px; background: #f2f2f2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .08), 0 10px 28px rgba(0, 0, 0, .12);
+}
+.project-body .big h3, .project-body .features-h { margin: 22px 0 6px; font-size: 1.3em; color: #444; }
+.project-body .big p { max-width: 40em; margin: 0; }
+.project-body .features-h { margin-top: 72px; }
+.project-body .clip-tiles { display: grid; gap: 28px; margin-top: 20px; }
+.project-body .clip-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.project-body .clip-tile { margin: 0; }
+.project-body .clip-tile video {
+  display: block; width: 100%; height: auto; border-radius: 10px; background: #f2f2f2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .08), 0 8px 22px rgba(0, 0, 0, .1);
+}
+.project-body .clip-tile-portrait video { max-width: 300px; margin: 0 auto; }
+.project-body .clip-tile figcaption { margin-top: 12px; font-size: .95em; color: #555; }
+@media (max-width: 767px) { .project-body .clip-tiles { grid-template-columns: 1fr; } }
+.project-body figure.clip-tile-portrait video { max-width: 300px; aspect-ratio: 480 / 780; margin: 0 auto; }
