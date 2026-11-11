@@ -1,0 +1,23 @@
+<div class="pano" data-pano>
+  <div class="pano-frame" tabindex="0" role="region" aria-roledescription="panorama"
+       aria-label="Digital Postcards panorama. Drag, swipe or use the arrow keys to travel.">
+    {%- for i in (1..9) %}
+    <div class="pano-layer" data-depth="0.{{ i }}">
+      <img src="/assets/postcards/layer{{ i }}.svg" alt="" draggable="false" loading="lazy">
+      <img src="/assets/postcards/layer{{ i }}.svg" alt="" draggable="false" loading="lazy">
+    </div>
+    {%- endfor %}
+    <button class="pano-arrow pano-prev" type="button" aria-label="Previous destination">‹</button>
+    <button class="pano-arrow pano-next" type="button" aria-label="Next destination">›</button>
+    <span class="pano-hint" aria-hidden="true">Drag to travel</span>
+  </div>
+  <ol class="pano-stops" aria-label="Destinations">
+    <li><button type="button" data-at="0.215">Beach</button></li>
+    <li><button type="button" data-at="0.365">Green valley</button></li>
+    <li><button type="button" data-at="0.51">Desert</button></li>
+    <li><button type="button" data-at="0.65">Fjord</button></li>
+    <li><button type="button" data-at="0.77">Mountains</button></li>
+    <li><button type="button" data-at="0.06">Night sky</button></li>
+  </ol>
+</div>
+<script src="/assets/js/postcards.js" defer></script>

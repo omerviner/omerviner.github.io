@@ -259,3 +259,40 @@ img { max-width: 100%; height: auto; display: block; }
 .project-body figure img { margin-top: 0; }
 .project-body figcaption { color: var(--muted); font-size: 0.9em; padding-top: 8px; }
 @media (max-width: 767px) { .project-body .shots { grid-template-columns: 1fr; } }
+
+/* ---------- Digital Postcards panorama ---------- */
+.pano { margin-top: 16px; }
+.pano-frame {
+  position: relative; overflow: hidden; aspect-ratio: 16 / 7; background: #2a3e6b;
+  cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none;
+}
+.pano-frame.dragging { cursor: grabbing; }
+.pano-frame:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.pano-layer { position: absolute; top: 0; left: 0; height: 100%; will-change: transform; }
+.pano-layer img { position: absolute; top: 0; left: 0; height: 100%; max-width: none; margin: 0 !important; pointer-events: none; }
+.pano-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+  width: 48px; height: 48px; border: 0; border-radius: 50%;
+  background: rgba(255, 255, 255, .85); color: #333; font-size: 30px; line-height: 44px; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+}
+.pano-arrow:hover { background: #fff; }
+.pano-prev { left: 12px; }
+.pano-next { right: 12px; }
+.pano-hint {
+  position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 2;
+  background: rgba(0, 0, 0, .55); color: #fff; font-size: 14px; padding: 4px 12px; border-radius: 99px;
+  transition: opacity .4s; pointer-events: none;
+}
+.pano-used .pano-hint { opacity: 0; }
+.pano-stops { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 8px; padding: 0; margin: 12px 0 0; }
+.pano-stops button {
+  font: inherit; font-size: 15px; border: 1px solid var(--line); background: #fff; color: var(--text);
+  border-radius: 99px; padding: 4px 14px; cursor: pointer; min-height: 36px;
+}
+.pano-stops button:hover { border-color: var(--accent); color: var(--accent-dark); }
+.pano-stops button.on { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+@media (max-width: 767px) {
+  .pano-frame { aspect-ratio: 4 / 3; }
+  .pano-arrow { width: 40px; height: 40px; font-size: 26px; line-height: 36px; }
+}
