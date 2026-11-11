@@ -16,8 +16,8 @@ layout: default
     <span>Student and personal projects, 2013 – 2018</span>
   </div>
   <div class="tiles tiles-small">
-    {%- for p in projects %}{% if p.group == "interactive" %}{% include card.html p=p %}{% endif %}{% endfor %}
-    {%- for p in projects %}{% if p.group == "design" %}{% include card.html p=p %}{% endif %}{% endfor %}
+    {%- assign earlier = site.projects | where_exp: "p", "p.earlier" | sort: "earlier" -%}
+    {%- for p in earlier %}{% include card.html p=p %}{% endfor %}
   </div>
 </section>
 
