@@ -21,16 +21,22 @@
   var touched = false, dragging = false, visible = true;
   var lastX = 0, lastT = 0, hoverSpeed = 0, parallax = 0;
   var lookAim = 0, look = 0;      // pointer position across the frame, -0.5..0.5, for hover parallax
-  var LOOK = 0.16;                // how far the nearest layer shifts, as a share of the frame width
+  var LOOK = 0.16;                // how far the nearest layer shifts sideways, as a share of the frame width
+  var lookYAim = 0, lookY = 0;
+  var BLEED = 0.16;               // layers are this much taller than the frame, so vertical shifts never show an edge
+  var H = 0;
 
   function measure() {
-    var h = frame.clientHeight;
+    H = frame.clientHeight;
+    var h = H * (1 + BLEED);
     V = frame.clientWidth;
     var f = W ? x / W : 0.2;
     W = h * ART_RATIO;
     P = W * PERIOD;
     layers.forEach(function (l) {
       l.style.width = (W + P) + "px";
+      l.style.height = h + "px";
+      l.style.top = (-(h - H) / 2) + "px";
       l.children[0].style.width = W + "px";
       l.children[1].style.width = W + "px";
       l.children[1].style.left = P + "px";
@@ -77,11 +83,14 @@
       parallax += ((vel + hoverSpeed) * 0.12 - parallax) * Math.min(1, dt * 3);
       parallax = Math.max(-V * 0.25, Math.min(V * 0.25, parallax));
       look += (lookAim - look) * Math.min(1, dt * 5);
+      lookY += (lookYAim - lookY) * Math.min(1, dt * 5);
       var M = V * 0.5, base = wrap(x - M) + M;   // keep room on both sides so shifted layers never show an edge
       layers.forEach(function (l) {
         var depth = parseFloat(l.dataset.depth);
-        var shift = parallax * depth + look * LOOK * V * depth * depth;  // nearer layers move much more
-        l.style.transform = "translate3d(" + (-base - shift) + "px,0,0)";
+        var d2 = depth;  // nearer layers move more
+        var shift = parallax * depth + look * LOOK * V * d2;
+        var dy = -lookY * H * (0.05 + 0.11 * depth);  // the whole view tilts a little, nearer layers more
+        l.style.transform = "translate3d(" + (-base - shift) + "px," + dy + "px,0)";
       });
       var here = wrap(x + V / 2) / W;
       stops.forEach(function (b) {
@@ -116,7 +125,9 @@
     } else if (e.pointerType === "mouse") {
       // like the original: the pointer near an edge travels that way
       var r = frame.getBoundingClientRect(), p = (e.clientX - r.left) / r.width - 0.5;
-      lookAim = reduce ? 0 : p;
+      var onButton = e.target.closest("button");
+      lookAim = (reduce || onButton) ? 0 : p;
+      lookYAim = (reduce || onButton) ? 0 : (e.clientY - r.top) / r.height - 0.5;
       hoverSpeed = Math.abs(p) > 0.3 ? Math.sign(p) * (Math.abs(p) - 0.3) * 1400 : 0;
       if (hoverSpeed) interact();
     }
@@ -124,7 +135,7 @@
   function endDrag() { dragging = false; frame.classList.remove("dragging"); }
   frame.addEventListener("pointerup", endDrag);
   frame.addEventListener("pointercancel", endDrag);
-  frame.addEventListener("pointerleave", function () { hoverSpeed = 0; lookAim = 0; });
+  frame.addEventListener("pointerleave", function () { hoverSpeed = 0; lookAim = 0; lookYAim = 0; });
 
   // trackpad: horizontal scroll only, so page scrolling still works
   frame.addEventListener("wheel", function (e) {
@@ -153,6 +164,6 @@
   }
   window.addEventListener("resize", measure);
   measure();
-  x = centerOf(0.215); // start at the beach
+  x = centerOf(0.26); // start at the beach
   requestAnimationFrame(frameStep);
 })();
