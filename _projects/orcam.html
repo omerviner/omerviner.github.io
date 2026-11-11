@@ -4,11 +4,11 @@ label: "iOS app + real-time C++"
 group: selected
 order: 4
 year: "2020 – 2024"
-summary: "AI earbuds that isolate one voice in a noisy room. I built the iOS app that controls them and the real-time software on the device."
+summary: "AI earbuds that isolate one voice in a noisy room. I built the iOS app that controls them and real-time software on the device."
 context: "Software Developer, OrCam"
 role: "iOS app UI from Figma to Swift: components, audio-driven animations, state and the data layer linked to the device. Real-time C++ on the device."
 tools: "Swift, C++ (real-time, multi-threaded), Python, SQL, BigQuery"
-outcome: "The app's room, balcony and favorites model shipped as designed, letting users move known voices in or out of the conversation without looking down. [TODO: add any number you can share: users, ratings, latency, crash-free rate.]"
+outcome: "I shipped the room, balcony and favorites model in the production app, letting users move known voices in or out of the conversation without looking down. [TODO: add any number you can share: users, ratings, latency, crash-free rate.]"
 links:
   - label: "UX case study by Rony Dagan"
     url: "https://www.ronydagan.com/sec-hear"
@@ -20,52 +20,33 @@ redirect_from: ["/orcam.html"]
 ---
   <h2>The product</h2>
   <p>OrCam Hear is a pair of AI earbuds for people with mild hearing loss. It isolates the voices you choose and suppresses background noise in real time.
-  Users control it from an iPhone app in the middle of a conversation, often at a busy table. So the app has to work at a glance, and without making a show of managing a hearing problem.</p>
+  Users control it from an iPhone app in the middle of a conversation, often at a busy table, so the app has to work at a glance.</p>
 
+  <h2>My part</h2>
+  <p>I was the developer of the iOS app and worked on the software on the earbuds' embedded device.
+  The designers gave me the screens and the interaction model in Figma; I turned them into a working app connected to the device.</p>
+  <ul>
+    <li><b>Figma to Swift.</b> Implemented every screen pixel-accurate, and worked with the designers on motion, timing and edge cases the mockups didn't cover.</li>
+    <li><b>Components in code.</b> Built each UI component in Swift as a shared part, so new screens were assembled from the same pieces as the design library.</li>
+    <li><b>Audio-driven animation.</b> Animations react to live audio from the device, so users see who is being heard and that the earbuds are working.</li>
+    <li><b>Smooth interaction.</b> Fast, predictable gestures for moving a person into or out of the conversation, tuned for use while talking.</li>
+    <li><b>State and data.</b> Managed the app's state and linked the UI to the data layer that talks to the device: enrolled voices, who is active and device status.</li>
+  </ul>
 
-  <h2>The design I built</h2>
-  <p>The UX lead, Rony Dagan, and the UI designer, Sarai Beris, designed the app around a spatial model.
-  The <b>room</b> holds the people you're listening to. The <b>balcony</b> holds people you've enrolled who are waiting. Strangers stay <b>outside</b>.
-  You pull people into the conversation or push them out with one quick move. My job was to turn that model into a smooth, reliable iOS app connected to the earbuds.</p>
-
+  <h2>What I built from</h2>
+  <p>The design is a spatial model by Rony Dagan (UX) and Sarai Beris (UI): the <b>room</b> holds the people you're listening to,
+  the <b>balcony</b> holds enrolled people who are waiting, and strangers stay outside. My job was to make that model feel immediate in the app.</p>
   <figure>
     <img src="/images/orcam/model.avif" alt="Diagram: the room holds active speakers, the balcony holds enrolled people, strangers stay outside" loading="lazy">
-    <figcaption>Room, balcony, outside. Diagram: Rony Dagan</figcaption>
+    <figcaption>The interaction model I implemented. Diagram: Rony Dagan</figcaption>
   </figure>
-
   <div class="shots">
     <figure><img src="/images/orcam/room.webp" alt="App screen: the room, with the people in the conversation" loading="lazy"><figcaption>The room, in use</figcaption></figure>
     <figure><img src="/images/orcam/full-room.webp" alt="App screen: a full room with several speakers" loading="lazy"><figcaption>A full table</figcaption></figure>
-    <figure><img src="/images/orcam/enroll.webp" alt="App screen: enrolling a new voice" loading="lazy"><figcaption>Enrolling a voice at home</figcaption></figure>
-    <figure><img src="/images/orcam/contacts.webp" alt="App screen: list of enrolled people" loading="lazy"><figcaption>The list, one level down</figcaption></figure>
+    <figure><img src="/images/orcam/enroll.webp" alt="App screen: enrolling a new voice" loading="lazy"><figcaption>Enrolling a voice</figcaption></figure>
+    <figure><img src="/images/orcam/contacts.webp" alt="App screen: list of enrolled people" loading="lazy"><figcaption>Enrolled people</figcaption></figure>
   </div>
-  <p class="imageDescription">App screens as designed by Rony Dagan and Sarai Beris, built in Swift by me.</p>
-
-  <h2>What I did on the app</h2>
-  <ul>
-    <li><b>Figma to Swift.</b> Implemented the designs screen by screen and kept them pixel-accurate, working directly with the designers on motion and edge cases.</li>
-    <li><b>Component library in code.</b> Built every UI component in Swift, matching the designers' component library, so new screens were assembled from shared parts.</li>
-    <li><b>Audio-driven animation.</b> Animations react to live audio from the device, so users can see who is being heard and that the earbuds are working.</li>
-    <li><b>Smooth interaction.</b> Fast, predictable gestures for moving people between the room and the balcony, tuned for use while talking.</li>
-    <li><b>State and data.</b> Managed the app's state and linked the UI to the app's data layer, which connects to the embedded device, including enrolled voices, who is active and device status.</li>
-  </ul>
-
-  <figure>
-    <img src="/images/orcam/flow-1.png" alt="UI user flow, part 1" loading="lazy">
-  </figure>
-  <figure>
-    <img src="/images/orcam/flow-2.png" alt="UI user flow, part 2" loading="lazy">
-  </figure>
-  <figure>
-    <img src="/images/orcam/flow-3.png" alt="UI user flow, part 3" loading="lazy">
-    <figcaption>UI user flows. Design: Sarai Beris</figcaption>
-  </figure>
-
-  <div class="shots">
-    <figure><img src="/images/orcam/colors.webp" alt="Color palette of the OrCam Hear app" loading="lazy"><figcaption>Colors</figcaption></figure>
-    <figure><img src="/images/orcam/icons.png" alt="Icon set of the OrCam Hear app" loading="lazy"><figcaption>Icons</figcaption></figure>
-  </div>
-  <p class="imageDescription">The visual system I implemented as shared Swift components. Design: Sarai Beris</p>
+  <p class="imageDescription">Screens I built in Swift. Design: Rony Dagan and Sarai Beris.</p>
 
   <h2>On the device</h2>
   <ul>
@@ -76,4 +57,4 @@ redirect_from: ["/orcam.html"]
   </ul>
 
   <h2>Team</h2>
-  <p>Rony Dagan, UX lead · Sarai Beris, UX/UI design and component library · Dor Aaron, product manager · Omer Viner, iOS app and device software.</p>
+  <p>Rony Dagan, UX lead · Sarai Beris, UI design · Dor Aaron, product manager · Omer Viner, iOS app and device software.</p>
