@@ -16,12 +16,27 @@ links:
 redirect_from: ["/bazaart.html"]
 ---
   <div class="features">
+  {% include feature.html clip="styling" alt="Background, size, shadow, position and a sale badge applied to every photo at once"
+     title="Batch styling"
+     problem="A seller needs one consistent look across a whole catalogue, and normally has to apply it photo by photo or learn a different tool for each effect."
+     challenge="A few simple choices (background, size, shadow, framing, a sale badge) restyle every photo at once, and each change shows across the whole grid immediately, so the result can be judged at a glance." %}
+  {% include feature.html clip="responsive" alt="The batch editor resizing from desktop to tablet to phone layout"
+     title="One responsive layout"
+     problem="A batch editor is built for a big desktop screen, but many sellers work from their phones."
+     challenge="One experience that adapts instead of two separate products. On a phone the tools move to a bottom bar, panels slide up like sheets, the header shrinks to what matters, and the page never zooms by accident or hides controls under the keyboard." %}
+  <div class="phone-stills">
+    <figure><img src="/images/bazaart/tablet.jpg" alt="Batch Studio at tablet width" loading="lazy"><figcaption>Tablet</figcaption></figure>
+    <figure><img src="/images/bazaart/phone.jpg" alt="Batch Studio at phone width" loading="lazy"><figcaption>Phone</figcaption></figure>
+    <figure><img src="/images/bazaart/phone-selection.jpg" alt="Phone with a selected photo and the floating action bar" loading="lazy"><figcaption>Phone, with a selection</figcaption></figure>
+  </div>
+  {% include feature.html clip="templates" alt="An AI template applied to a whole batch, with each new version next to its original"
+     title="AI templates on a whole batch"
+     problem="Turning plain product photos into studio-quality visuals is slow and expensive when done one at a time."
+     challenge="Pick one look and apply it to every photo in one step, then keep the originals and their new versions together so results are easy to compare. Seventeen generations run in parallel, and each result lands beside its source, so nothing is lost or out of order." %}
   {% include feature.html img="empty.jpg" alt="Batch Studio empty state: Edit up to 1000 photos in seconds, with Import photos and Import folder"
      title="The first screen"
      problem="The first screen decides whether a new seller starts."
      challenge="Say in one glance what the tool does, how many photos it takes, and the single next step, without clutter." %}
-
-  <h2>Working with hundreds of photos</h2>
   {% include feature.html clip="flight" alt="A photo opens from the grid to full screen and returns to its tile"
      title="Full-screen flight"
      problem="When a photo opens full screen, a plain cut or fade makes people lose track of which photo they picked and where it came from."
@@ -42,22 +57,10 @@ redirect_from: ["/bazaart.html"]
      title="Sections"
      problem="A batch is a pile of photos, but sellers think in products, collections and listings."
      challenge="Turn a pile into structure with a few gestures: select, create a section, name it, and drag photos in. Dragging has to feel light even with hundreds of photos on screen, and every step has to be undoable." %}
-
-  <h2>One look for the whole catalogue</h2>
-  {% include feature.html clip="styling" alt="Background, size, shadow, position and a sale badge applied to every photo at once"
-     title="Batch styling"
-     problem="A seller needs one consistent look across a whole catalogue, and normally has to apply it photo by photo or learn a different tool for each effect."
-     challenge="A few simple choices (background, size, shadow, framing, a sale badge) restyle every photo at once, and each change shows across the whole grid immediately, so the result can be judged at a glance." %}
-  {% include feature.html clip="templates" alt="An AI template applied to a whole batch, with each new version next to its original"
-     title="AI templates on a whole batch"
-     problem="Turning plain product photos into studio-quality visuals is slow and expensive when done one at a time."
-     challenge="Pick one look and apply it to every photo in one step, then keep the originals and their new versions together so results are easy to compare. Seventeen generations run in parallel, and each result lands beside its source, so nothing is lost or out of order." %}
   {% include feature.html clip="studio" alt="AI Studio: picking a shot type, choosing from nine generated options, results grouped with the product"
      title="AI Studio on a product"
      problem="A flat product photo does not sell as well as one on a model, but a photoshoot per item is out of reach for small sellers."
      challenge="A short path from a plain photo to a gallery of shots: pick a shot type, see nine ready-to-judge options appear together, choose the ones you like, and have them land next to the original, grouped as one product, ready to name and keep." %}
-
-  <h2>On the phone</h2>
   {% include feature.html clip="phone" portrait=true alt="The phone flow: tap to select, tool sheets, pinch to change the grid, full-screen view with a page strip"
      title="Phone flow"
      problem="Most sellers photograph their products on a phone, so the whole editing flow has to work with thumbs, on a small screen, with a keyboard and a browser that wants to zoom and scroll."
@@ -66,15 +69,6 @@ redirect_from: ["/bazaart.html"]
      title="Edit with AI"
      problem="Describing a change in words is the fastest way to edit a photo, but a phone screen has little room, and the keyboard covers half of it."
      challenge="A focused view with only the photo being changed and a single prompt field that stays in reach above the keyboard. Once a request is sent, the person returns to the grid and sees the new version appear next to the original, with no waiting on a separate screen." %}
-  {% include feature.html clip="responsive" alt="The batch editor resizing from desktop to tablet to phone layout"
-     title="One responsive layout"
-     problem="A batch editor is built for a big desktop screen, but many sellers work from their phones."
-     challenge="One experience that adapts instead of two separate products. On a phone the tools move to a bottom bar, panels slide up like sheets, the header shrinks to what matters, and the page never zooms by accident or hides controls under the keyboard." %}
-  <div class="phone-stills">
-    <figure><img src="/images/bazaart/tablet.jpg" alt="Batch Studio at tablet width" loading="lazy"><figcaption>Tablet</figcaption></figure>
-    <figure><img src="/images/bazaart/phone.jpg" alt="Batch Studio at phone width" loading="lazy"><figcaption>Phone</figcaption></figure>
-    <figure><img src="/images/bazaart/phone-selection.jpg" alt="Phone with a selected photo and the floating action bar" loading="lazy"><figcaption>Phone, with a selection</figcaption></figure>
-  </div>
   </div>
 
   <h2>What I did</h2>
