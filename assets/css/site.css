@@ -352,5 +352,5 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 767px) { .project-body .gallery-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .project-body .sheet { margin-top: 28px; }
 .project-body .sheet img { border-radius: 10px; border: 1px solid var(--line); }
-.project-body .icons { max-width: 760px; }
+.project-body .icons { max-width: none; }
 .project-body .icons figcaption { text-align: center; line-height: 1.35; }
