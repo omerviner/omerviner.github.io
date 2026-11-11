@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
-{%- assign siblings = site.projects | where: "group", page.group | sort: "order" -%}
+{%- if page.earlier -%}
+  {%- assign siblings = site.projects | where_exp: "p", "p.earlier" | sort: "earlier" -%}
+{%- else -%}
+  {%- assign siblings = site.projects | where: "group", page.group | sort: "order" -%}
+{%- endif -%}
 {%- for p in siblings -%}
   {%- if p.url == page.url -%}
     {%- assign i = forloop.index0 -%}

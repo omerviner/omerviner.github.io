@@ -354,3 +354,9 @@ img { max-width: 100%; height: auto; display: block; }
 .project-body .sheet img { border-radius: 10px; border: 1px solid var(--line); }
 .project-body .icons { max-width: none; }
 .project-body .icons figcaption { text-align: center; line-height: 1.35; }
+.project-body .gallery { align-items: start; }
+.project-body .gallery-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.project-body .gallery .wide { grid-column: 1 / -1; }
+.project-body .wide-figure { margin: 24px 0 0; }
+.project-body .wide-figure img { border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, .08), 0 8px 22px rgba(0, 0, 0, .1); }
+@media (max-width: 767px) { .project-body .gallery-3 { grid-template-columns: 1fr; } }
