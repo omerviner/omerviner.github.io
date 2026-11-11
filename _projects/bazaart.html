@@ -4,11 +4,11 @@ label: "Batch Studio · AI photo editor"
 group: selected
 order: 3
 year: "2024 – present"
-summary: "Batch Studio: Bazaart's web editor for sellers, which edits up to 1,000 product photos at once. I worked on it as part of a small team."
+summary: "Batch Studio: Bazaart's web editor for sellers, which edits up to 1,000 product photos at once on desktop. I worked on it in a team of two developers and a designer."
 context: "Software Engineer, Bazaart"
-role: "Frontend engineer on a small team with a designer and another developer; built the coded design system, canvas tools and state architecture"
-outcome: "Since its first release in June 2026, Batch Studio has accounted for 8% of Bazaart's usage."
-tools: "TypeScript, React, Redux Toolkit, Storybook, Jest, Fabric.js (HTML5 canvas)"
+role: "Frontend engineer. Led the bulk editor in a team of two developers and a designer, made the architecture decisions, and helped build the coded design system"
+outcome: "Released in June 2026. Opened by about 8% of active web users in its first 19 weeks."
+tools: "TypeScript, React, Redux Toolkit, Web Workers, Storybook, Jest, Playwright, Fabric.js (HTML5 canvas)"
 hero: "/images/bazaart/templates.jpg"
 thumb: "/images/bazaart/thumb.jpg"
 links:
@@ -58,9 +58,18 @@ redirect_from: ["/bazaart.html"]
 
   <h2>What I did</h2>
   <ul>
-    <li>Worked as part of a small team with a designer and another developer, plus product and backend. Took ownership of the features, the architecture and the technical decisions in my areas.</li>
-    <li>Built the coded design system: reusable components from buttons to full screens, with motion and layout primitives, documented in Storybook.</li>
-    <li>Designed the state architecture and data layer, moved it to Redux Toolkit, and tuned performance and memory for smooth editing on low-end devices.</li>
-    <li>Built canvas editing tools on Fabric.js, and shipped the UI in about 15 languages, including right-to-left.</li>
+    <li>Led the web app's bulk AI photo editor in a team of two developers and a designer, and made the architecture decisions. People edit one or many images with instant rendering while AI generation runs in the background.</li>
+    <li>Fixed 7+ second UI freezes on large photo batches by moving heavy jobs (HEIC conversion, background removal, masks) to Web Workers. The editor supports up to 1,000 images on desktop.</li>
+    <li>Built a history system that stores each image's actions and values instead of rendered images, with capped steps and undo recovery across multiple images.</li>
+    <li>Built a side-editing mode with its own UI and history, so people can experiment safely, then discard or apply. Built canvas editing tools on Fabric.js with rotation-aware geometry.</li>
+    <li>Split a monolithic app context into Redux Toolkit state slices, removing unnecessary UI re-renders.</li>
+    <li>Helped build the coded design system from Figma and Claude Design: reusable components from buttons to full screens, documented in Storybook, and the base for the design-to-code agent workflow.</li>
+    <li>Adapted the editor for phones: panel layouts, touch gestures and selection, and a full-screen image focus that resizes as panels open and close.</li>
+  </ul>
+
+  <h2>How I work with AI</h2>
+  <ul>
+    <li>Helped build agent workflows: a design-to-code pipeline (task bundles, agent-built, verified by tests, reviewed in separate PRs) and a per-PR translation sync that updates about 15 languages.</li>
+    <li>Keep code quality high with manual and AI-assisted review, regression and Playwright UI tests, and documented code design, decisions and a learning log so agents follow our standards.</li>
   </ul>
 <script src="/assets/js/clips.js" defer></script>
