@@ -9,7 +9,7 @@ context: "PopApp Books"
 role: "Design and development"
 tools: "Claude Design, Astro, Cloudflare Workers, iCount checkout"
 outcome: "Live at popappbooks.me. [TODO: launch date and anything measurable: orders, conversion, school quotes, newsletter sign-ups.]"
-hero: "/images/popapp/hero.jpg"
+hero: "/images/popapp/s-hero.jpg"
 thumb: "/images/popapp/thumb.jpg"
 links:
   - label: "Visit popappbooks.me"
@@ -19,6 +19,23 @@ redirect_from: ["/popapp.html"]
   <h2>The problem</h2>
   <!-- TODO: one or two sentences on what wasn't working with the old site. -->
   <p>[What wasn't working with the old site, and what the new one had to do.]</p>
+
+  <h2>The home page</h2>
+  <p>One page that tells the book's story, from the first look to the purchase.</p>
+  <figure>
+    <video src="/images/popapp/clips/scroll.mp4" poster="/images/popapp/clips/scroll.jpg" muted loop playsinline preload="none"
+           aria-label="Scrolling through the PopApp Books home page on desktop" data-clip></video>
+    <figcaption>A scroll through the home page, desktop</figcaption>
+  </figure>
+  <div class="shots">
+    <figure><img src="/images/popapp/s-demo.jpg" alt="How it works: the demo video and three steps" loading="lazy"><figcaption>How it works, with the demo video</figcaption></figure>
+    <figure><img src="/images/popapp/s-inside.jpg" alt="Three spreads from inside the book" loading="lazy"><figcaption>Inside the book</figcaption></figure>
+    <figure><img src="/images/popapp/s-stories.jpg" alt="Quotes from parents and kindergarten teachers, with a TV clip" loading="lazy"><figcaption>Parents and teachers</figcaption></figure>
+    <figure><img src="/images/popapp/s-proof.jpg" alt="Awards and press logos" loading="lazy"><figcaption>Awards and press</figcaption></figure>
+    <figure><img src="/images/popapp/s-creator.jpg" alt="How it started: from a Bezalel final project to thousands of homes" loading="lazy"><figcaption>How it started</figcaption></figure>
+    <figure><img src="/images/popapp/s-book.jpg" alt="The book with its price and what's included" loading="lazy"><figcaption>The book</figcaption></figure>
+    <figure><img src="/images/popapp/s-faq.jpg" alt="FAQ and contact" loading="lazy"><figcaption>FAQ and contact</figcaption></figure>
+  </div>
 
   <h2>Design system</h2>
   <p>The site is built from the book itself: its illustrations, the brush strokes from the crowdfunding campaign and the feel of printed paper. I turned that into a system that code can reuse.</p>
@@ -47,9 +64,12 @@ redirect_from: ["/popapp.html"]
 
   <h2>Build</h2>
   <p>Astro on Cloudflare, Hebrew and right-to-left, responsive across phone, tablet and desktop. Forms with spam protection, a newsletter with double opt-in, cookie consent and ad measurement, a skip link and share previews on every page.</p>
+  <div class="responsive-shots">
+    <figure><img src="/images/popapp/s-tablet.jpg" alt="Home page hero at tablet size" loading="lazy"><figcaption>Tablet</figcaption></figure>
+    <figure><img src="/images/popapp/s-phone.jpg" alt="Home page hero at phone size" loading="lazy"><figcaption>Phone</figcaption></figure>
+  </div>
   <div class="shots">
-    <figure><img src="/images/popapp/home-desktop.jpg" alt="Home page, desktop" loading="lazy"><figcaption>Home, desktop</figcaption></figure>
-    <figure><img src="/images/popapp/home-mobile.jpg" alt="Home page, phone" loading="lazy"><figcaption>Home, phone</figcaption></figure>
     <figure><img src="/images/popapp/purchase.jpg" alt="Purchase page" loading="lazy"><figcaption>Purchase</figcaption></figure>
     <figure><img src="/images/popapp/design-system.jpg" alt="Design system sheet: colors and type" loading="lazy"><figcaption>Design system: colors and type</figcaption></figure>
   </div>
+<script src="/assets/js/clips.js" defer></script>
