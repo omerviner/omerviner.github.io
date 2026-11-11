@@ -49,6 +49,8 @@ layout: default
 {{ content }}
   </div>
 
+  <p class="project-contact">Want to talk about this work? <a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></p>
+
   <nav class="prev-next" aria-label="More projects">
     {%- if i > 0 %}{% assign p = siblings[prev_i] %}<a href="{{ p.url }}">← {{ p.title }}</a>{% else %}<span></span>{% endif %}
     {%- if next_i < siblings.size %}{% assign p = siblings[next_i] %}<a href="{{ p.url }}">{{ p.title }} →</a>{% endif %}

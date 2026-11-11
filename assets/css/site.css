@@ -393,3 +393,4 @@ img { max-width: 100%; height: auto; display: block; }
 .project-body .big video, .project-body .clip-tile video, .project-body .feature-media video {
   border-radius: 0; box-shadow: none; background: transparent;
 }
+.project-contact { margin: 72px 0 0; padding-top: 24px; border-top: 1px solid #e4e4e4; color: #555; }
