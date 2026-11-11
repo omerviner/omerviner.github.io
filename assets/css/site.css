@@ -301,3 +301,25 @@ img { max-width: 100%; height: auto; display: block; }
   .pano-arrow { width: 40px; height: 40px; }
   .pano-arrow svg { width: 18px; height: 18px; }
 }
+
+/* ---------- Feature rows (Batch Studio) ---------- */
+.project-body .features { width: 100cqw; }
+.project-body .feature {
+  display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 24px 40px; align-items: center; margin-top: 56px;
+}
+.project-body .feature-portrait { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+.project-body .feature-media video, .project-body .feature-media img {
+  display: block; width: 100%; height: auto; margin: 0; background: #f2f2f2;
+}
+.project-body .feature-portrait .feature-media video { max-width: 340px; margin: 0 auto; }
+.project-body .feature-text { max-width: 34em; }
+.project-body .feature-text h3 { margin: 0 0 8px; font-size: 1.25em; color: #444; }
+.project-body .feature-text p { margin: 0 0 10px; }
+.project-body .phone-stills { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; margin-top: 40px; align-items: end; }
+.project-body .phone-stills figure { margin: 0; }
+@media (max-width: 1100px) {
+  .project-body .feature, .project-body .feature-portrait { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .project-body .phone-stills { grid-template-columns: 1fr; }
+}

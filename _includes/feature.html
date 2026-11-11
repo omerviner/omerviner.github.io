@@ -1,0 +1,16 @@
+{%- comment -%} One Batch Studio feature: a looping clip (or still) beside its problem and challenge. {%- endcomment -%}
+<section class="feature{% if include.portrait %} feature-portrait{% endif %}">
+  <div class="feature-media">
+    {%- if include.clip %}
+    <video src="/images/bazaart/clips/{{ include.clip }}.mp4" poster="/images/bazaart/clips/{{ include.clip }}.jpg"
+           muted loop playsinline preload="none" aria-label="{{ include.alt }}" data-clip></video>
+    {%- else %}
+    <img src="/images/bazaart/{{ include.img }}" alt="{{ include.alt }}" loading="lazy">
+    {%- endif %}
+  </div>
+  <div class="feature-text">
+    <h3>{{ include.title }}</h3>
+    <p><b>The problem.</b> {{ include.problem }}</p>
+    <p><b>The challenge.</b> {{ include.challenge }}</p>
+  </div>
+</section>
