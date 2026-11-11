@@ -346,3 +346,9 @@ img { max-width: 100%; height: auto; display: block; }
   .project-body .gallery { grid-template-columns: 1fr; }
   .project-body .awards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+.project-body .gallery-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.project-body .gallery-4 img { box-shadow: 0 2px 6px rgba(0, 0, 0, .08), 0 6px 16px rgba(0, 0, 0, .1); }
+.project-body .model { max-width: 640px; }
+@media (max-width: 767px) { .project-body .gallery-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.project-body .sheet { margin-top: 28px; }
+.project-body .sheet img { border-radius: 10px; border: 1px solid var(--line); }
