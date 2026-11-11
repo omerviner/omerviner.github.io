@@ -89,6 +89,7 @@ img { max-width: 100%; height: auto; display: block; }
   margin-left: var(--sidebar-w);
   padding: 48px 48px 96px;
   max-width: 1800px;  /* fills the window; padding keeps the edges */
+  container-type: inline-size;  /* lets wide media (the panorama) use the full width */
 }
 
 .topbar, .overlay { display: none; }
@@ -261,7 +262,8 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 767px) { .project-body .shots { grid-template-columns: 1fr; } }
 
 /* ---------- Digital Postcards panorama ---------- */
-.pano { margin-top: 16px; }
+.pano { margin-top: 16px; width: 100cqw; max-width: 100%; }
+.project .pano { max-width: none; }
 .pano-frame {
   position: relative; overflow: hidden; aspect-ratio: 16 / 7; background: #2a3e6b;
   cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none;
@@ -272,13 +274,15 @@ img { max-width: 100%; height: auto; display: block; }
 .pano-layer img { position: absolute; top: 0; left: 0; height: 100%; max-width: none; margin: 0 !important; pointer-events: none; }
 .pano-arrow {
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
-  width: 48px; height: 48px; border: 0; border-radius: 50%;
-  background: rgba(255, 255, 255, .85); color: #333; font-size: 30px; line-height: 44px; cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+  width: 48px; height: 48px; padding: 0; border: 0; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: #fff; color: var(--accent-dark); cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .18); transition: background .2s, color .2s;
 }
-.pano-arrow:hover { background: #fff; }
-.pano-prev { left: 12px; }
-.pano-next { right: 12px; }
+.pano-arrow svg { width: 22px; height: 22px; display: block; }
+.pano-arrow:hover { background: var(--accent-dark); color: #fff; }
+.pano-prev { left: 16px; }
+.pano-next { right: 16px; }
 .pano-hint {
   position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 2;
   background: rgba(0, 0, 0, .55); color: #fff; font-size: 14px; padding: 4px 12px; border-radius: 99px;
@@ -294,5 +298,6 @@ img { max-width: 100%; height: auto; display: block; }
 .pano-stops button.on { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
 @media (max-width: 767px) {
   .pano-frame { aspect-ratio: 4 / 3; }
-  .pano-arrow { width: 40px; height: 40px; font-size: 26px; line-height: 36px; }
+  .pano-arrow { width: 40px; height: 40px; }
+  .pano-arrow svg { width: 18px; height: 18px; }
 }
