@@ -96,7 +96,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ---------- Home ---------- */
 
-.intro { font-family: Raleway, system-ui, sans-serif; font-size: 1.3em; color: #444; margin: 0 0 32px; max-width: 32em; }
+.intro { font-family: Raleway, system-ui, sans-serif; font-size: 1.3em; color: #444; margin: 0 0 32px; max-width: none; }
 
 /* Project tiles: image only, name shows on hover (as in the original site) */
 .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
