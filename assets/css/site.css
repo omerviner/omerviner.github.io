@@ -386,3 +386,7 @@ img { max-width: 100%; height: auto; display: block; }
 .project-body figure.clip-tile-portrait video { max-width: 300px; aspect-ratio: 480 / 780; margin: 0 auto; }
 .project-body .big video { width: auto; max-width: 100%; max-height: 78vh; }
 .project-body .clip-tile video { max-height: 70vh; }
+.project-body .big { margin-top: 80px; padding-top: 28px; border-top: 1px solid #e4e4e4; }
+.project-body .big h3 { margin: 0 0 6px; }
+.project-body .big p { margin: 0 0 22px; }
+.project-body .features > .big:first-child { margin-top: 48px; }
