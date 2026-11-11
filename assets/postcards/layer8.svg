@@ -1,0 +1,40 @@
+<svg id="object-middle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16356.98 800">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: #fffdfb;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="5460.4" y1="598.7" x2="7048.6" y2="598.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2d4b2c"/>
+      <stop offset="0.34" stop-color="#2e472b"/>
+      <stop offset="0.68" stop-color="#303b29"/>
+      <stop offset="0.99" stop-color="#342925"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="5841.59" y1="1005.74" x2="5977.21" y2="308.02" gradientUnits="userSpaceOnUse">
+      <stop offset="0.05" stop-color="#415e1d"/>
+      <stop offset="0.25" stop-color="#44621e"/>
+      <stop offset="0.47" stop-color="#4c6f22"/>
+      <stop offset="0.7" stop-color="#5b8429"/>
+      <stop offset="0.93" stop-color="#6ea232"/>
+      <stop offset="1" stop-color="#76ad35"/>
+    </linearGradient>
+  </defs>
+  <title>layer8</title>
+  <g>
+    <path class="cls-1" d="M5904.9,312.59s-45.5,79,71.5,169,225,126,303,144c51.8,12,362.2,84.1,572.8,149.7,106.4,33.1,193,76.71,196.4,85.8-10,67.8-307.1-31.4-307.1-31.4l-1281.1-6Z"/>
+    <path class="cls-2" d="M5315.23,474.32c163.14-136.39,346.17-184.83,514.17-187.83,273.8-4.9-330.2,188.4,324,375C6309.1,706,6805.25,812,6805.25,812L4949.3,832.29S5176.14,590.61,5315.23,474.32Z"/>
+  </g>
+  <path class="cls-3" d="M4475.21,380.31c-145.4,14.8-198.4-31.6-197.7-28.7,13.2,53.9,127.1,49,155.7,46.7C4472.31,395.11,4476.61,380.21,4475.21,380.31Z"/>
+  <path class="cls-3" d="M4925.21,482.31c-161,51-198.6-31.5-197.7-28.7,26.7,83.7,127.1,49,155.7,46.7C4922.31,497.11,4926.61,481.91,4925.21,482.31Z"/>
+  <path class="cls-3" d="M4348.31,467.61c-1.4-.2,208.5,36.2,261-1.5,32-23,103.7-13.4,101.3-14.4C4655.21,428.31,4434.31,477.61,4348.31,467.61Z"/>
+  <path class="cls-3" d="M4949.11,384.31c-53.7-18.6-157.1-4.7-186.2,3-87.1,23-114.1-10-115.1-9.7-74,21.7-155.1-3.3-155.1-3.3,37.8,35.4,80.4,46.7,124,47,79.5,0.4,161.9-28.5,224.3-31,99.1-4,172.7,32,177.2,32A240,240,0,0,0,4949.11,384.31Z"/>
+</svg>

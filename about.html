@@ -1,45 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Omer Viner</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="stylesheet.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<div class="topSpacer"></div> 
-	<div class="infoPage">
-		<div class="projectDesc">
-			Creative Technologist | Software Developer | Interactive Designer | Entrepreneur
-		</div>
-		<div class="projectTec" style="padding: 10px;">
-			Graduated student from the Hebrew University of Jerusalem -<br/>Bezalel Academy of Arts and Design joint program
-			in computer science and design.<br/><br/>
-			<b>Hebrew University of Jerusalem.</b><br/>
-			Received a B.Sc. in Computer Science.<br/><br/>
-			<b>Bezalel Academy of Art and Design.</b><br/>
-			Received a B.Des. in the Visual Communication department.
-			<br/><br/>
-			I have a strong background and experience in both computer science and communication design, <br/>
-			which enables me to create and develop innovative and effective solutions for various problems and needs.<br/>
-			<br/>
-			I have won several awards and recognitions for my excellence and quality, <br/>
-			such as the <b>Communication Arts, Interactive Award</b> for “My Cells and I”, <br/>
-			an interactive children’s book that teaches kids about the human body and its cells, <br/>
-			which combined my software engineering and communication design skills.<br/>
-			<br/>
-			My passion is to learn new technologies and tools and apply them<br/>
-			to create inventive and interactive projects.
-		</div>
-		<div class="projectTec" style="padding: 10px;">
-			<b>Contact</b><br/>
-			<a href="mailto:mr.omer.viner@gmail.com" class="mailLink" target="_blank">mr.omer.viner@gmail.com</a><br/>
-			<a href="https://www.linkedin.com/in/omer-viner-23038a95/" style="color: var(--mainColor)" target="_blank">Linkedin</a>
-		</div>
-	</div>
+---
+layout: default
+title: About
+permalink: /about/
+redirect_from: ["/about.html"]
+summary: "Senior software engineer and designer: Bazaart, PopApp Books, OrCam. B.Sc. Computer Science + B.Des."
+---
+<article class="about">
+  <h1 class="project-title">About</h1>
+  <p class="project-summary">I design and build the parts of software people feel: smooth interaction, precise editing tools,
+  and experiences that turn complex technology into something simple to use.</p>
 
-</body>
-</html>
+  <p>I studied computer science and visual communication together, in the joint program of the Hebrew University and
+  Bezalel Academy of Arts and Design. Since then I've worked where the two meet: I read a design like a designer
+  and build it like an engineer.</p>
+
+  <p>Today I'm a software engineer at <a href="/work/bazaart/">Bazaart</a>, on the web app of an AI photo and design
+  editor used by millions. Before that I spent four years at <a href="/work/orcam/">OrCam</a>, writing real-time C++
+  and the iOS app for OrCam Hear.</p>
+
+  <p>I founded PopApp Books. Its first book, <a href="/work/mycellsandi/"><i>My Cells and I</i></a>, is a pop-up
+  book whose app recognizes the open page through the phone's camera. Its content was scientifically approved by the Davidson Institute of Science Education (Weizmann Institute). It raised ₪300K+ from about 2,200 backers and won
+  five international awards. <i>Space &amp; I</i>, about space, is in the works.</p>
+
+  <h2>How I work with AI</h2>
+  <p>When I work on a task or a project, I turn the process itself into a tool I can work with later. For example:</p>
+  <ul>
+    <li>A video editor that gets a folder of images and videos plus a song, creates a storyboard, and lets me edit the video easily.</li>
+    <li>An InDesign to Unity tool that makes it easier to bring the print and interactive parts of a book together.</li>
+  </ul>
+  <p>At Bazaart I work the same way inside a team: I helped build a design-to-code pipeline and a per-PR translation sync across about 15 languages, and I keep code design, decisions and a learning log documented so agents follow our standards.</p>
+
+  <h2>Recognition</h2>
+  <ul>
+    <li>Communication Arts Interactive Annual 2019</li>
+    <li>22nd Japan Media Arts Festival, Entertainment Division</li>
+    <li>Digital Ehon Award (two second prizes)</li>
+    <li>iJungle Illustration, Merit Award</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://popappbooks.me" target="_blank" rel="noopener">PopApp Books</a></p>
+</article>

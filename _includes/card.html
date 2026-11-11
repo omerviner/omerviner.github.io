@@ -1,0 +1,9 @@
+<a class="tile{% unless include.p.thumb %} tile-text{% endunless %}" href="{{ include.p.url }}">
+  {%- if include.p.thumb %}
+  <img src="{{ include.p.thumb }}" alt="" loading="lazy" width="800" height="400">
+  {%- endif %}
+  <span class="tile-hover">
+    <span class="tile-title">{{ include.p.title }}</span>
+    {%- if include.p.label %}<span class="tile-label">{{ include.p.label }}</span>{% endif %}
+  </span>
+</a>

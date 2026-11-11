@@ -1,102 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Omer Viner</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="stylesheet.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
-  <link rel="icon" href="favicon.png">
-</head>
-<script>
-//window.location.replace("https://www.facebook.com/MyCellsAndI/");
-</script>
-<body>
+---
+layout: default
+---
+{%- assign projects = site.projects | sort: "order" -%}
+<p class="intro">Software engineer who builds interactive, visual products.</p>
 
-<div class="container-fluid layout-container">
-
-  <!-- Mobile Menu Toggle -->
-  <button id="menuToggle" class="mobile-menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <!-- Mobile Overlay -->
-  <div id="mobileOverlay" class="mobile-overlay"></div>
-
-	<div class="row layout-row">
-    <div class="col-sm-3 no-float" id="bar" >
-		<div class="navLink" id="myName"><a href="#projects" id="myNameLink">Omer Viner</a></div>
-		<div class="navLink"><a href="#projects" class="chosen" id="projectsLink">Work</a></div>
-		<div class="navLink"><a href="#about" >About</a></div>
-		<hr>
-		<div class="projectCategory">Interactive</div>
-		<div class="projectLink">
-				<a href="#mycellsandi" id="mycellsandi">My Cells and I</a>
-			</div>
-		<div class="projectLink">
-			<a href="#nonlinear" id="nonlinear">Non-Linear Story</a>
-		</div>
-		<div class="projectLink">
-			<a href="#elal" id="elal">El-Al Advertisement Concept</a>
-		</div>
-		<div class="projectCategory">Design</div>
-		<div class="projectLink">
-			<a href="#digital" id="digital">Digital Postcards</a>
-		</div>
-		<div class="projectLink">
-			<a href="#cloudi" id="cloudi">Cloudi</a>
-		</div>
-		<div class="projectLink">
-			<a href="#snowden" id="snowden">Snowden</a>
-		</div>
-		<div class="projectLink">
-			<a href="#graphics" id="graphics">Cultural Graphics</a>
-		</div>
-		<div class="projectLink">
-			<a href="#stain" id="stain">Dreams Train</a>
-		</div>
-		<div class="projectLink">
-			<a href="#photos" id="photos">Photography</a>
-		</div>
-		<div class="projectLink">
-			<a href="#serie" id="serie">Tiny Adventures</a>
-		</div>
-		<div class="projectLink">
-			<a href="#camera" id="camera">Drawings</a>
-		</div>
-		<div class="projectLink">
-			<a href="#package" id="package">Package Design</a>
-		</div>
-		<div class="projectLink">
-			<a href="#patterns" id="patterns">Patterns</a>
-		</div>
-
-		<div id="bottomText"><br/><span id="ov"> Omer Viner, All rights reserved</span></div>
-		
-	</div>
-
-		<div class="col-sm-9 no-float" id="mainArea">
-			<div id="contentLoader" class="loading">
-				<div class="skeleton skeleton-title"></div>
-				<div class="skeleton-grid">
-					<div class="skeleton skeleton-card"></div>
-					<div class="skeleton skeleton-card"></div>
-					<div class="skeleton skeleton-card"></div>
-					<div class="skeleton skeleton-card"></div>
-				</div>
-				<div class="skeleton skeleton-text"></div>
-				<div class="skeleton skeleton-text short"></div>
-			</div>
-			<div id="contentContainer"></div>
-		</div>
-    
+<section aria-label="Selected work">
+  <div class="tiles">
+    {%- for p in projects %}{% if p.group == "selected" %}{% include card.html p=p %}{% endif %}{% endfor %}
   </div>
-</div>
+</section>
 
-</body>
-</html>
+<section aria-labelledby="earlier">
+  <div class="archive-head">
+    <h2 id="earlier">Earlier work</h2>
+    <span>Student and personal projects, 2013 – 2018</span>
+  </div>
+  <div class="tiles tiles-small">
+    {%- assign earlier = site.projects | where_exp: "p", "p.earlier" | sort: "earlier" -%}
+    {%- for p in earlier %}{% include card.html p=p %}{% endfor %}
+  </div>
+</section>
+
+<script>
+  // Old links used #hash routes (e.g. /#mycellsandi). Send them to the new pages.
+  (function () {
+    var h = location.hash.slice(1);
+    if (!h || h === "projects" || h === "earlier" || h === "selected") return;
+    if (h === "about") { location.replace("/about/"); return; }
+    var known = [{% for p in site.projects %}"{{ p.url | split: '/' | last }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+    if (known.indexOf(h) !== -1) location.replace("/work/" + h + "/");
+  })();
+</script>

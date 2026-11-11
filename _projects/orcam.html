@@ -1,0 +1,60 @@
+---
+title: "OrCam Hear"
+label: "iOS app + real-time C++"
+group: selected
+order: 4
+year: "2020 – 2024"
+summary: "AI earbuds that isolate one voice in a noisy room. I built the iOS app that controls them and real-time software on the device."
+context: "Software Developer, OrCam"
+role: "iOS app UI from Figma to Swift: components, audio-driven animations, state and the data layer linked to the device. Real-time C++ on the device."
+tools: "Swift, C++ (real-time, multi-threaded), Python, SQL, BigQuery"
+outcome: "I built the room, balcony and favorites model in the iOS app, letting users move known voices in or out of the conversation without looking down. The device itself did not reach mass production."
+hero: "/images/orcam/hero.avif"
+thumb: "/images/orcam/hero.avif"
+redirect_from: ["/orcam.html"]
+---
+  <p>OrCam Hear is a pair of AI earbuds for people with mild hearing loss. They isolate the voices you choose and suppress background noise in real time.
+  People control them from an iPhone app in the middle of a conversation, so the app has to work at a glance.</p>
+
+  <h2>My part</h2>
+  <p>I was the developer of the iOS app and also worked on the software on the earbuds' embedded device.</p>
+  <ul>
+    <li><b>Figma to Swift.</b> Every screen built pixel-accurate, with motion, timing and edge cases worked out with the designers. Each UI component is a shared part in Swift, so new screens are assembled from the same pieces as the design library.</li>
+    <li><b>Audio-driven animation.</b> Animations react to live audio from the device, so users see who is being heard and that the earbuds are working. Fast, predictable gestures move a person into or out of the conversation.</li>
+    <li><b>State and data.</b> The app's state, and the data layer that talks to the device: enrolled voices, who is active and device status.</li>
+  </ul>
+
+  <h2>On the device</h2>
+  <ul>
+    <li>Real-time C++ for the embedded device: multi-process, multi-threaded, under tight compute and power limits.</li>
+    <li>Owned parts of the real-time audio-video flow: components that capture, process and deliver sound and image data.</li>
+    <li>Integrated ML algorithms; built performance optimizations, usage analytics and internal tools.</li>
+    <li>Coordinated development and testing with the vision, DSP, algorithms, embedded, mobile and QA teams.</li>
+  </ul>
+
+  <h2>What I built from</h2>
+  <p>The interaction model: the <b>room</b> holds the people you're listening to, the <b>balcony</b> holds enrolled people who are waiting, and strangers stay outside.
+  My job was to make that model feel immediate in the app.</p>
+  <figure class="model">
+    <img src="/images/orcam/model.avif" alt="Diagram: the room holds active speakers, the balcony holds enrolled people, strangers stay outside" loading="lazy">
+    <figcaption>The interaction model. Diagram by the UX lead</figcaption>
+  </figure>
+  <div class="gallery gallery-4">
+    <figure><img src="/images/orcam/room.webp" alt="App screen: the room, with the people in the conversation" loading="lazy"><figcaption>The room</figcaption></figure>
+    <figure><img src="/images/orcam/full-room.webp" alt="App screen: a full room with several speakers" loading="lazy"><figcaption>A full table</figcaption></figure>
+    <figure><img src="/images/orcam/enroll.webp" alt="App screen: enrolling a new voice" loading="lazy"><figcaption>Enrolling a voice</figcaption></figure>
+    <figure><img src="/images/orcam/contacts.webp" alt="App screen: list of enrolled people" loading="lazy"><figcaption>Enrolled people</figcaption></figure>
+  </div>
+  <p class="imageDescription">Screens I built in Swift. Design by the UX and UI designers.</p>
+
+  <h2>App icons</h2>
+  <p>Alongside the apps, I designed app icon explorations for two OrCam products, <b>OrCam Hear</b> and <b>OrCam MyMe</b>: an eye and an ear merged into one mark, in a few directions and colorways. These were internal and did not ship.</p>
+  <div class="gallery gallery-4 icons">
+    <figure><img src="/images/orcam/icon-concept.webp" alt="OrCam Hear app icon: an eye inside the shape of an ear" loading="lazy"><figcaption>OrCam Hear<br>the mark</figcaption></figure>
+    <figure><img src="/images/orcam/icon-variants.webp" alt="OrCam Hear app icon variants in several colors" loading="lazy"><figcaption>OrCam Hear<br>variants and colorways</figcaption></figure>
+    <figure><img src="/images/orcam/icon-closeup.webp" alt="OrCam MyMe app icon, close up" loading="lazy"><figcaption>OrCam MyMe<br>the mark, close up</figcaption></figure>
+    <figure><img src="/images/orcam/icon-directions.webp" alt="OrCam MyMe app icon directions at several sizes" loading="lazy"><figcaption>OrCam MyMe<br>directions at app icon sizes</figcaption></figure>
+  </div>
+  <p class="imageDescription">My own designs, internal explorations.</p>
+
+  <p class="imageDescription credits">Team: UX lead, UI designer, product manager, and me on the iOS app and device software.</p>

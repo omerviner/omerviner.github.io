@@ -1,0 +1,7 @@
+{%- comment -%} One section: title and text first, then the clip they describe. {%- endcomment -%}
+<section class="big">
+  <h3>{{ include.title }}</h3>
+  <p>{{ include.text }}</p>
+  <video src="/images/bazaart/clips/{{ include.clip }}.mp4" poster="/images/bazaart/clips/{{ include.clip }}.jpg"
+         muted loop playsinline preload="none" aria-label="{{ include.alt }}" data-clip></video>
+</section>

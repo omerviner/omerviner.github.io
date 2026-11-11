@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- if page.url == "/" %}
+  {%- assign full_title = site.title | append: " · " | append: site.tagline %}
+  {%- else %}
+  {%- assign full_title = page.title | append: " · " | append: site.title %}
+  {%- endif %}
+  {%- assign desc = page.summary | default: site.description | strip_html | normalize_whitespace %}
+  {%- assign img = page.thumb | default: page.hero | default: site.og_image %}
+  <title>{{ full_title }}</title>
+  <meta name="description" content="{{ desc | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ full_title | escape }}">
+  <meta property="og:description" content="{{ desc | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ img | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.png">
+  <link rel="preload" href="/assets/fonts/raleway-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/raleway-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/opensans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu" aria-controls="bar" aria-expanded="false">☰</button>
+    <a class="topbar-name" href="/">Omer Viner</a>
+  </header>
+  <div id="overlay" class="overlay" hidden></div>
+  {% include sidebar.html %}
+  <main id="main" class="main">
+    {{ content }}
+  </main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+---
+title: "Bazaart"
+label: "Batch Studio · AI photo editor"
+group: selected
+order: 3
+year: "2024 – present"
+summary: "Batch Studio: Bazaart's web editor for sellers, which edits up to 1,000 product photos at once on desktop. I worked on it in a team of two developers and a designer."
+context: "Software Engineer, Bazaart"
+role: "Frontend engineer. Led the bulk editor in a team of two developers and a designer, made the architecture decisions, and helped build the coded design system"
+outcome: "Released in June 2026. Opened by about 8% of active web users in its first 19 weeks."
+tools: "TypeScript, React, Redux Toolkit, Web Workers, Storybook, Jest, Playwright, Fabric.js (HTML5 canvas)"
+hero: "/images/bazaart/templates.jpg"
+thumb: "/images/bazaart/thumb.jpg"
+links:
+  - label: "bazaart.com"
+    url: "https://www.bazaart.com"
+redirect_from: ["/bazaart.html"]
+---
+  <div class="features">
+  {% include big.html clip="styling" alt="Background, size, shadow, position and a sale badge applied to every photo at once"
+     title="Batch styling"
+     text="A few simple choices (background, size, shadow, framing, a sale badge) restyle every photo at once, and each change shows across the whole grid immediately, so a seller can judge the result at a glance." %}
+  {% include big.html clip="responsive" alt="The batch editor resizing from desktop to tablet to phone layout"
+     title="One responsive layout"
+     text="One experience that adapts instead of two separate products. On a phone the tools move to a bottom bar, panels slide up like sheets, and the page never zooms by accident or hides controls under the keyboard." %}
+  <div class="phone-stills">
+    <figure><img src="/images/bazaart/tablet.jpg" alt="Batch Studio at tablet width" loading="lazy"><figcaption>Tablet</figcaption></figure>
+    <figure><img src="/images/bazaart/phone.jpg" alt="Batch Studio at phone width" loading="lazy"><figcaption>Phone</figcaption></figure>
+    <figure><img src="/images/bazaart/phone-selection.jpg" alt="Phone with a selected photo and the floating action bar" loading="lazy"><figcaption>Phone, with a selection</figcaption></figure>
+  </div>
+  {% include big.html clip="templates" alt="An AI template applied to a whole batch, with each new version next to its original"
+     title="AI templates on a whole batch"
+     text="Pick one look and apply it to every photo in one step. Placeholder cards appear instantly, then a small worker pool generates four at a time while the rest wait. Results return to their original positions, and a failure marks only its own card without stopping the others." %}
+  {% include big.html clip="studio" alt="AI Studio: picking a shot type, choosing from nine generated options, results grouped with the product"
+     title="AI Studio on a product"
+     text="A short path from a plain photo to a gallery of shots: pick a shot type, choose from nine options that appear together, and have them land next to the original, grouped as one product." %}
+
+  <h2 class="features-h">On the phone</h2>
+  <div class="clip-tiles">
+    {% include tile.html clip="phone" portrait=true alt="The phone flow: tap to select, tool sheets, pinch to change the grid, full-screen view with a page strip"
+       title="Phone flow" text="Tap to select, tool sheets that slide up, a pinch to change the grid, and nothing that zooms the page by accident." %}
+    {% include tile.html clip="phone-ai" portrait=true alt="Edit with AI on a phone: a prompt field above the keyboard, then the new version appears next to the original"
+       title="Edit with AI" text="One prompt field above the keyboard, and the new version appears next to the original in the grid." %}
+  </div>
+
+  <h2 class="features-h">Interaction details</h2>
+  <div class="clip-tiles">
+    {% include tile.html clip="flight" alt="A photo opens from the grid to full screen and returns to its tile"
+       title="Full-screen flight" text="A photo travels from its tile to the large view and back, landing on the right tile every time." %}
+    {% include tile.html clip="select" alt="Dragging a selection box over the grid selects a block of photos"
+       title="Rubber-band selection" text="Drag a box to select a block of photos, with a floating action bar where you are working." %}
+    {% include tile.html clip="zoom" alt="Zooming and panning into a product photo in full screen"
+       title="Photo zoom" text="Zoom toward the pointer and pan freely, so edges and details can be checked before trusting an edit." %}
+    {% include tile.html clip="crop" alt="A photo lifts out of the grid into the crop view and lands back in place"
+       title="Crop" text="The photo lifts out of the grid and lands back where it was. The original is never harmed." %}
+  </div>
+  </div>
+
+  <h2>What I did</h2>
+  <ul>
+    <li>Led the web app's bulk AI photo editor in a team of two developers and a designer, and made the architecture decisions. People edit one or many images with instant rendering while AI generation runs in the background.</li>
+    <li>Fixed 7+ second UI freezes on large photo batches by moving heavy jobs (HEIC conversion, background removal, masks) to Web Workers. The editor supports up to 1,000 images on desktop.</li>
+    <li>Built a history system that stores each image's actions and values instead of rendered images, with capped steps and undo recovery across multiple images.</li>
+    <li>Built a side-editing mode with its own UI and history, so people can experiment safely, then discard or apply. Built canvas editing tools on Fabric.js with rotation-aware geometry.</li>
+    <li>Split a monolithic app context into Redux Toolkit state slices, removing unnecessary UI re-renders.</li>
+    <li>Helped build the coded design system from Figma and Claude Design: reusable components from buttons to full screens, documented in Storybook, and the base for the design-to-code agent workflow.</li>
+    <li>Adapted the editor for phones: panel layouts, touch gestures and selection, and a full-screen image focus that resizes as panels open and close.</li>
+  </ul>
+
+  <h2>How I work with AI</h2>
+  <ul>
+    <li>Helped build agent workflows: a design-to-code pipeline (task bundles, agent-built, verified by tests, reviewed in separate PRs) and a per-PR translation sync that updates about 15 languages.</li>
+    <li>Keep code quality high with manual and AI-assisted review, regression and Playwright UI tests, and documented code design, decisions and a learning log so agents follow our standards.</li>
+  </ul>
+<script src="/assets/js/clips.js" defer></script>

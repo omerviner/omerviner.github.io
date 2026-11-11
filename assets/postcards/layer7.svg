@@ -1,0 +1,15 @@
+<svg id="objects-far" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16356.98 800">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="4321.23" y1="1887.13" x2="4335.72" y2="1721.51" gradientTransform="translate(176.31 -1712.8) rotate(7.41)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.49" stop-color="#fff5e8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <title>layer7</title>
+  <path class="cls-1" d="M4906.91,776.8s-381-8.6-561.1-38.1c-246.3-40.4-533.2-119.6-536.7-150-1.4-12.3,16.7-21.3,16.7-21.3s-257.5-16.7-267.5-33.1,53.6-34.7,175.5-18.9c0,0-101.9,11.3,148.3,34.4,121.1,11.2,1035.8,149.5,1035.8,149.5Z"/>
+</svg>
