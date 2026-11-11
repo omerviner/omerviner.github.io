@@ -390,3 +390,6 @@ img { max-width: 100%; height: auto; display: block; }
 .project-body .big h3 { margin: 0 0 6px; }
 .project-body .big p { margin: 0 0 22px; }
 .project-body .features > .big:first-child { margin-top: 48px; }
+.project-body .big video, .project-body .clip-tile video, .project-body .feature-media video {
+  border-radius: 0; box-shadow: none; background: transparent;
+}
