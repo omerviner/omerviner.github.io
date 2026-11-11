@@ -324,7 +324,7 @@ img { max-width: 100%; height: auto; display: block; }
   .project-body .phone-stills { grid-template-columns: 1fr; }
 }
 .project-body figure video { display: block; width: 100%; height: auto; background: #f2f2f2; }
-.project-body .responsive-shots { display: grid; grid-template-columns: minmax(0, 1206fr) minmax(0, 440fr); gap: 16px; margin-top: 32px; align-items: end; }
+.project-body .responsive-shots { display: grid; grid-template-columns: minmax(0, 1510fr) minmax(0, 493fr); gap: 16px; margin-top: 32px; align-items: end; }
 .project-body .responsive-shots figure { margin: 0; }
 .project-body .postcards { width: 100cqw; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; margin-top: 24px; }
 .project-body .postcards figure { margin: 0; }
