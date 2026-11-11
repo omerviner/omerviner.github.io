@@ -330,3 +330,19 @@ img { max-width: 100%; height: auto; display: block; }
 .project-body .postcards figure { margin: 0; }
 .project-body .postcards img { border-radius: 14px; box-shadow: 0 2px 6px rgba(0, 0, 0, .08), 0 10px 28px rgba(0, 0, 0, .12); }
 @media (max-width: 767px) { .project-body .postcards { grid-template-columns: 1fr; } }
+
+/* ---------- Book page: rounded gallery, awards, campaign ---------- */
+.project-body .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; margin-top: 24px; }
+.project-body .gallery figure { margin: 0; }
+.project-body .gallery img { border-radius: 14px; box-shadow: 0 2px 6px rgba(0, 0, 0, .08), 0 8px 22px rgba(0, 0, 0, .1); }
+.project-body .awards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 28px; text-align: center; }
+.project-body .awards figure { margin: 0; }
+.project-body .awards img { width: 112px; height: 112px; margin: 0 auto; }
+.project-body .awards figcaption { margin-top: 8px; font-size: .9em; color: var(--muted); line-height: 1.35; }
+.project-body .campaign { margin-top: 32px; max-width: 520px; }
+.project-body .campaign img { border-radius: 10px; border: 1px solid var(--line); }
+.project-body .credits { margin-top: 48px; }
+@media (max-width: 767px) {
+  .project-body .gallery { grid-template-columns: 1fr; }
+  .project-body .awards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
