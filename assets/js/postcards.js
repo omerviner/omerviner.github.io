@@ -94,7 +94,8 @@
       });
       var here = wrap(x + V / 2) / W;
       stops.forEach(function (b) {
-        var on = Math.abs(parseFloat(b.dataset.at) - here) < 0.06;
+        var d = Math.abs(parseFloat(b.dataset.at) - here) % PERIOD;
+        var on = Math.min(d, PERIOD - d) < 0.06;  // distance around the loop
         b.classList.toggle("on", on);
         if (on) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current");
       });
